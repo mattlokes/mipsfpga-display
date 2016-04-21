@@ -26,10 +26,21 @@
 		parameter integer C_S_AXI_BUSER_WIDTH	= 0
 	)
 	(
-		// Users to add ports here
-
-		// User ports ends
-		// Do not modify the ports beyond this line
+		// Pixel Clock (VGA/LCD Interface)
+        input  wire  PIX_CLK, //IN
+         
+         /******* VGA Signals *******************/
+        // VGA Horizontal Sync Pulse
+        output wire  VGA_HSYNC,      //OUT
+        // VGA Vertical Sync Pulse
+        output wire  VGA_VSYNC,      //OUT
+        // VGA Red
+        output wire [3:0] VGA_RED,   //OUT 3:0
+        // VGA Green
+        output wire [3:0] VGA_GREEN, //OUT 3:0
+        // VGA Blue
+        output wire [3:0] VGA_BLUE,  //OUT 3:0
+        
 
 		// Global Clock Signal
 		input wire  S_AXI_ACLK,
@@ -531,7 +542,7 @@
 	// -- Example code to access user logic memory region
 	// ------------------------------------------
 
-	generate
+	/*generate
 	  if (USER_NUM_MEM >= 1)
 	    begin
 	      assign mem_select  = 1;
@@ -593,9 +604,35 @@
 	    begin
 	      axi_rdata <= 32'h00000000;
 	    end       
+	end*/
+    
+    assign mem_wren = axi_wready && S_AXI_WVALID ;
+    assign data_in  = S_AXI_WDATA[(mem_byte_index*8+7) -: 8];
+	
+	always @(axi_rvalid) begin
+	   axi_rdata = 32'hDEADBABE;
 	end    
 
 	// Add user logic here
+
+ mf_disp_top disp(
+   .resetn      ( S_AXI_ARESETN ),  //IN
+   
+   .pix_clk     ( PIX_CLK ), //IN
+   .sys_clk     ( S_AXI_ACLK ), //IN
+
+   .sys_wr_vld  ( mem_wren ), //IN
+   .sys_wr_addr ( axi_awaddr ), //IN 15:0
+   .sys_wr_data ( data_in ), //IN 31:0
+   
+   /******* VGA Signals *******************/
+   
+   .VGA_hsync ( VGA_HSYNC ), //OUT
+   .VGA_vsync ( VGA_VSYNC ), //OUT
+   .VGA_red   ( VGA_RED[3:0] ),   //OUT 3:0
+   .VGA_green ( VGA_GREEN[3:0] ), //OUT 3:0
+   .VGA_blue  ( VGA_BLUE[3:0] )   //OUT 3:0
+);
 
 	// User logic ends
 

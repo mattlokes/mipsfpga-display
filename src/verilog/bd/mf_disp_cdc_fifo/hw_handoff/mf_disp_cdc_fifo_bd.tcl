@@ -158,7 +158,7 @@ proc create_root_design { parentCell } {
 
   # Create instance: fifo_generator_0, and set properties
   set fifo_generator_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:12.0 fifo_generator_0 ]
-  set_property -dict [ list CONFIG.Data_Count_Width {10} CONFIG.Fifo_Implementation {Independent_Clocks_Distributed_RAM} CONFIG.Full_Threshold_Assert_Value {1021} CONFIG.Full_Threshold_Negate_Value {1020} CONFIG.Input_Data_Width {4} CONFIG.Input_Depth {1024} CONFIG.Output_Data_Width {4} CONFIG.Output_Depth {1024} CONFIG.Read_Data_Count_Width {10} CONFIG.Write_Data_Count_Width {10}  ] $fifo_generator_0
+  set_property -dict [ list CONFIG.Fifo_Implementation {Independent_Clocks_Distributed_RAM} CONFIG.Input_Data_Width {4} CONFIG.Input_Depth {1024}  ] $fifo_generator_0
 
   # Create port connections
   connect_bd_net -net din_1 [get_bd_ports din] [get_bd_pins fifo_generator_0/din]

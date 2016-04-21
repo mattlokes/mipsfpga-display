@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:24:04 MST 2014
-//Date        : Thu Feb 04 14:28:50 2016
+//Date        : Thu Apr 21 21:51:44 2016
 //Host        : matt-windows running 64-bit major release  (build 9200)
 //Command     : generate_target mf_disp_cdc_fifo.bd
 //Design      : mf_disp_cdc_fifo

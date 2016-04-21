@@ -20,11 +20,15 @@
 		parameter integer C_S00_AXI_BUSER_WIDTH	= 0
 	)
 	(
-		// Users to add ports here
-
-		// User ports ends
-		// Do not modify the ports beyond this line
-
+		//Port for Pixel Clock
+        input  wire  pix_clk, //IN
+     
+        // Ports for VGA Interface
+        output wire  vga_hsync,      //OUT
+        output wire  vga_vsync,      //OUT
+        output wire [3:0] vga_red,   //OUT 3:0
+        output wire [3:0] vga_green, //OUT 3:0
+        output wire [3:0] vga_blue,  //OUT 3:0
 
 		// Ports of Axi Slave Bus Interface S00_AXI
 		input wire  s00_axi_aclk,
@@ -85,6 +89,14 @@
 		.C_S_AXI_RUSER_WIDTH(C_S00_AXI_RUSER_WIDTH),
 		.C_S_AXI_BUSER_WIDTH(C_S00_AXI_BUSER_WIDTH)
 	) mipsfpga_display_v1_0_S00_AXI_inst (
+	    
+	    .PIX_CLK(pix_clk),
+        .VGA_HSYNC(vga_hysnc),
+        .VGA_VSYNC(vga_vsync),
+        .VGA_RED(vga_red[3:0]),
+        .VGA_GREEN(vga_green[3:0]),
+        .VGA_BLUE(vga_blue[3:0]),
+        
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWID(s00_axi_awid),
