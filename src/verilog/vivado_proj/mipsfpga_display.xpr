@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2014.4 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.   -->
+
+<Project Version="7" Minor="2" Path="C:/Users/Matt/Projects/mipsfpga-display/src/verilog/vivado_proj/mipsfpga_display.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="b839ce4b7a0344559da64e549ff91638"/>
+    <Option Name="Part" Val="xc7a100tcsg324-1"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="BoardPart" Val=""/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../packaged_ip/mipsfpga_display_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../ip_repo/mipsfpga_display_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../ip_repo/mipsfpga-display_1.0"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/../../../../../../../users/matt/projects/mipsfpga-display/packaged_ip/mipsfpga_display_1.0/hdl/mipsfpga_display_v1_0_S00_AXI.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../users/matt/projects/mipsfpga-display/packaged_ip/mipsfpga_display_1.0/hdl/mipsfpga_display_v1_0.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../../../users/matt/projects/mipsfpga-display/packaged_ip/mipsfpga_display_1.0/component.xml">
+        <FileInfo SFType="IPXACT"/>
+      </File>
+      <File Path="$PPRDIR/../src/mf_disp_conf.vh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/mf_disp_cmd_reg_top.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/mf_disp_addr_dec.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/mf_disp_top.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/mf_disp_fb_top.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/mf_disp_syncs.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/mf_disp_intf_vga_top.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/mf_disp_sync.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../bd/mf_disp_palette/mf_disp_palette.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="ip/mf_disp_palette_palette_blk_mem_gen_0/mf_disp_palette_palette_blk_mem_gen_0.xci"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="hw_handoff/mf_disp_palette_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="hw_handoff/mf_disp_palette.hwh"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="mf_disp_palette_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="hdl/mf_disp_palette.v"/>
+      </File>
+      <File Path="$PPRDIR/../bd/mf_disp_vga_clk/mf_disp_vga_clk.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="ip/mf_disp_vga_clk_vga_clk_wiz_0/mf_disp_vga_clk_vga_clk_wiz_0.xci"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="hw_handoff/mf_disp_vga_clk_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="hw_handoff/mf_disp_vga_clk.hwh"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="mf_disp_vga_clk_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="hdl/mf_disp_vga_clk.v"/>
+      </File>
+      <File Path="$PPRDIR/../bd/mf_disp_fb/mf_disp_fb.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="hw_handoff/mf_disp_fb_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="mf_disp_fb_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="hdl/mf_disp_fb.v"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="hw_handoff/mf_disp_fb.hwh"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="ip/mf_disp_fb_framebuff_blk_mem_gen_0/mf_disp_fb_framebuff_blk_mem_gen_0.xci"/>
+      </File>
+      <File Path="$PPRDIR/../bd/mf_disp_cdc_fifo/mf_disp_cdc_fifo.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="ip/mf_disp_cdc_fifo_fifo_generator_0_0/mf_disp_cdc_fifo_fifo_generator_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="hw_handoff/mf_disp_cdc_fifo_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="hw_handoff/mf_disp_cdc_fifo.hwh"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="mf_disp_cdc_fifo_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="hdl/mf_disp_cdc_fifo.v"/>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="mipsfpga_display_v1_0"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../users/matt/projects/mipsfpga-display/packaged_ip/mipsfpga_display_1.0/hdl/mipsfpga_display_v1_0.v"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <File Path="$PPRDIR/mf_disp_hw_tb_pins.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <File Path="$PPRDIR/../test/mf_disp_hw_tb.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/mf_disp_conf.vh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="mipsfpga_display_v1_0"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="QuestaSim/ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+  </Simulators>
+  <Runs Version="1" Minor="9">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+  </Runs>
+</Project>
