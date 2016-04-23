@@ -610,9 +610,6 @@
 	    end       
 	end*/
     
-    assign mem_wren = axi_wready && S_AXI_WVALID ;
-    assign data_in  = S_AXI_WDATA[(C_S_AXI_DATA_WIDTH-1) : 0];
-	
 	always @(axi_rvalid) begin
 	   axi_rdata = 32'hDEADBABE;
 	end    
@@ -625,9 +622,9 @@
    .pix_clk     ( PIX_CLK ), //IN
    .sys_clk     ( S_AXI_ACLK ), //IN
 
-   .sys_wr_vld  ( mem_wren ), //IN
+   .sys_wr_vld  ( axi_wready && S_AXI_WVALID ), //IN
    .sys_wr_addr ( axi_awaddr ), //IN 15:0
-   .sys_wr_data ( data_in ), //IN 31:0
+   .sys_wr_data ( S_AXI_WDATA[(C_S_AXI_DATA_WIDTH-1) : 0] ), //IN 31:0
    
    /******* VGA Signals *******************/
    
