@@ -1,0 +1,3 @@
+# compile vhdl design source files
+vhdl fifo_generator_v12_0  "../../../../ipshared/xilinx.com/fifo_generator_v12_0/255f4893/hdl/fifo_generator_v12_0_vh_rfs.vhd"
+vhdl xil_defaultlib  "../../../../bd/mf_disp_cdc_fifo/ip/mf_disp_cdc_fifo_fifo_generator_0_0/sim/mf_disp_cdc_fifo_fifo_generator_0_0.vhd"

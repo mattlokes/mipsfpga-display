@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog blk_mem_gen_v8_2  "../../../../ipshared/xilinx.com/blk_mem_gen_v8_2/38e122e0/simulation/blk_mem_gen_v8_2.v" --include "../../../include"
+verilog xil_defaultlib  "../../../../bd/mf_disp_fb/ip/mf_disp_fb_framebuff_blk_mem_gen_0/sim/mf_disp_fb_framebuff_blk_mem_gen_0.v" --include "../../../include"
+verilog xil_defaultlib  "../../../../bd/mf_disp_fb/hdl/mf_disp_fb.v" --include "../../../include"
+verilog xil_defaultlib  "../../../../bd/mf_disp_palette/ip/mf_disp_palette_palette_blk_mem_gen_0/sim/mf_disp_palette_palette_blk_mem_gen_0.v" --include "../../../include"
+verilog xil_defaultlib  "../../../../bd/mf_disp_palette/hdl/mf_disp_palette.v" --include "../../../include"
+verilog xil_defaultlib  "../../../../bd/mf_disp_cdc_fifo/hdl/mf_disp_cdc_fifo.v" --include "../../../include"
+verilog xil_defaultlib  "../../../src/mf_disp_syncs.v" --include "../../../include"
+verilog xil_defaultlib  "../../../src/mf_disp_intf_vga_top.v" --include "../../../include"
+verilog xil_defaultlib  "../../../src/mf_disp_fb_top.v" --include "../../../include"
+verilog xil_defaultlib  "../../../src/mf_disp_cmd_reg_top.v" --include "../../../include"
+verilog xil_defaultlib  "../../../src/mf_disp_addr_dec.v" --include "../../../include"
+verilog xil_defaultlib  "../../../../bd/mf_disp_vga_clk/ip/mf_disp_vga_clk_vga_clk_wiz_0/mf_disp_vga_clk_vga_clk_wiz_0_clk_wiz.v" --include "../../../include"
+verilog xil_defaultlib  "../../../../bd/mf_disp_vga_clk/ip/mf_disp_vga_clk_vga_clk_wiz_0/mf_disp_vga_clk_vga_clk_wiz_0.v" --include "../../../include"
+verilog xil_defaultlib  "../../../../bd/mf_disp_vga_clk/hdl/mf_disp_vga_clk.v" --include "../../../include"
+verilog xil_defaultlib  "../../../src/mf_disp_top.v" --include "../../../include"
+verilog xil_defaultlib  "../../../sim/mf_disp_hw_tb.v" --include "../../../include"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"

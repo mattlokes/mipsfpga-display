@@ -2,8 +2,8 @@
 <Root MajorVersion="0" MinorVersion="31">
   <CompositeFile CompositeFileTopName="mf_disp_vga_clk" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED"/>
+    <Generation Name="SYNTHESIS" State="STALE"/>
+    <Generation Name="IMPLEMENTATION" State="STALE"/>
     <Generation Name="SIMULATION" State="GENERATED"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\mf_disp_vga_clk_vga_clk_wiz_0\mf_disp_vga_clk_vga_clk_wiz_0.xci" Type="IP">
