@@ -22,11 +22,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="hw_handoff/mf_disp_fb_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="hdl/mf_disp_fb.v"/>
-        <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="mf_disp_fb_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="hw_handoff/mf_disp_fb.hwh"/>
         <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="ip/mf_disp_fb_framebuff_blk_mem_gen_0/mf_disp_fb_framebuff_blk_mem_gen_0.xci"/>
-        <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="hw_handoff/mf_disp_fb_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_fb.bd" FileRelPathName="mf_disp_fb_ooc.xdc"/>
       </File>
       <File Path="$PPRDIR/../bd/mf_disp_palette/mf_disp_palette.bd">
         <FileInfo>
@@ -133,6 +133,9 @@
         <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="hw_handoff/mf_disp_vga_clk_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="hdl/mf_disp_vga_clk.v"/>
       </File>
+      <File Path="$PPRDIR/../../../component.xml">
+        <FileInfo SFType="IPXACT"/>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="mipsfpga_display"/>
@@ -172,6 +175,7 @@
         <Option Name="TopModule" Val="mf_disp_hw_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
