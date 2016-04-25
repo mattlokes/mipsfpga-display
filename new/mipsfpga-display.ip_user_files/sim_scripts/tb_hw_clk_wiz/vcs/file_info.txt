@@ -1,0 +1,4 @@
+Language File-Name                IP             Library         File-Path                                                                           
+Verilog, tb_hw_clk_wiz_clk_wiz.v, tb_hw_clk_wiz, xil_defaultlib, ../../../../mipsfpga-display.srcs/sources_1/ip/tb_hw_clk_wiz/tb_hw_clk_wiz_clk_wiz.v
+Verilog, tb_hw_clk_wiz.v,         tb_hw_clk_wiz, xil_defaultlib, ../../../../mipsfpga-display.srcs/sources_1/ip/tb_hw_clk_wiz/tb_hw_clk_wiz.v        
+Verilog, glbl.v,                  *,             xil_defaultlib, glbl.v                                                                              
