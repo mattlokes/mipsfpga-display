@@ -1,39 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1461597159">
-  <File Type="RDS-DCP" Name="mipsfpga_display.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1461618025">
+  <File Type="RDS-DCP" Name="mf_disp_hw_axi_tb.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="mipsfpga_display_utilization_synth.pb"/>
+  <File Type="RDS-UTIL-PB" Name="mf_disp_hw_axi_tb_utilization_synth.pb"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="mipsfpga_display_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="mipsfpga_display.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="mf_disp_hw_axi_tb_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="mf_disp_hw_axi_tb.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RDS-RDS" Name="mipsfpga_display.vds"/>
-  <File Type="RDS-UTIL" Name="mipsfpga_display_utilization_synth.rpt"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="mipsfpga_display_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="mipsfpga_display_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="mf_disp_hw_axi_tb.vds"/>
+  <File Type="RDS-UTIL" Name="mf_disp_hw_axi_tb_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="mf_disp_hw_axi_tb_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="mf_disp_hw_axi_tb_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/fb_bram_mem_gen/fb_bram_mem_gen.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/proj/include/mf_disp_conf.vh">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../Projects/mipsfpga-display/src/verilog/proj/include/mf_disp_conf.vh"/>
@@ -124,23 +103,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/sim/mf_disp_hw_axi_tb.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/imports/proj/sim/mf_disp_hw_axi_tb.v"/>
+        <Attr Name="ImportTime" Val="1461609417"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="mipsfpga_display"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="mf_disp_hw_axi_tb"/>
     </Config>
   </FileSet>
-  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/package_constrs">
-    <File Path="$PSRCDIR/package_constrs/imports/new/timing.xdc">
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/hw_tb_constrs">
+    <File Path="$PSRCDIR/hw_tb_constrs/imports/hw_tb_constrs/mf_disp_hw_tb_pins.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/package_constrs/new/timing.xdc"/>
-        <Attr Name="ImportTime" Val="1461596544"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/constrs_1/imports/hw_tb_constrs/mf_disp_hw_tb_pins.xdc"/>
+        <Attr Name="ImportTime" Val="1461579087"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/package_constrs/imports/new/timing.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -148,4 +134,8 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="cdc_fifo_gen"/>
+  <BlockFileSet Type="BlockSrcs" Name="pal_bram_mem_gen"/>
+  <BlockFileSet Type="BlockSrcs" Name="fb_bram_mem_gen"/>
+  <BlockFileSet Type="BlockSrcs" Name="tb_hw_clk_wiz"/>
 </GenRun>

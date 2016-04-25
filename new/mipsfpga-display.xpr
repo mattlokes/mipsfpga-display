@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="10" Path="C:/Users/matt.lokes/mipsfpga-display/mipsfpga-display.xpr">
+<Project Version="7" Minor="10" Path="C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7a9355bda57c44a29c235bbf0fb0a11a"/>
@@ -16,6 +16,7 @@
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val="digilentinc.com:nexys4_ddr:part0:1.1"/>
+    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
@@ -27,38 +28,6 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/fb_bram_mem_gen/fb_bram_mem_gen.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="fb_bram_mem_gen.xml"/>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3.vhd"/>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="synth/fb_bram_mem_gen.vhd"/>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="blk_mem_gen_v8_3_1/simulation/blk_mem_gen_v8_3.vhd"/>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="summary.log"/>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="fb_bram_mem_gen.veo"/>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="fb_bram_mem_gen_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="sim/fb_bram_mem_gen.vhd"/>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="fb_bram_mem_gen.vho"/>
-        <CompFileExtendedInfo CompFileName="fb_bram_mem_gen.xci" FileRelPathName="doc/blk_mem_gen_v8_3_changelog.txt"/>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/proj/include/mf_disp_conf.vh">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Projects/mipsfpga-display/src/verilog/proj/include/mf_disp_conf.vh"/>
@@ -142,7 +111,6 @@
       <File Path="$PSRCDIR/sources_1/imports/proj/src/mf_disp_sync.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Projects/mipsfpga-display/src/verilog/proj/src/mf_disp_sync.v"/>
           <Attr Name="ImportTime" Val="1461579088"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -150,10 +118,18 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/sim/mf_disp_hw_axi_tb.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/imports/proj/sim/mf_disp_hw_axi_tb.v"/>
+          <Attr Name="ImportTime" Val="1461609417"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="mipsfpga_display"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="mf_disp_hw_axi_tb"/>
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
@@ -168,6 +144,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/proj/sim/mf_disp_hw_tb.v">
         <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Projects/mipsfpga-display/src/verilog/proj/sim/mf_disp_hw_tb.v"/>
           <Attr Name="ImportTime" Val="1461579087"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -177,40 +154,17 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="mf_disp_hw_tb"/>
+        <Option Name="TopModule" Val="mf_disp_hw_axi_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="tb_hw_clk_wiz" Type="BlockSrcs" RelSrcDir="$PSRCDIR/tb_hw_clk_wiz">
-      <File Path="$PSRCDIR/sources_1/ip/tb_hw_clk_wiz/tb_hw_clk_wiz.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz.veo"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz_stub.v"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz_board.xdc"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz.v"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz_clk_wiz.v"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz.xdc"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="doc/clk_wiz_v5_2_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="tb_hw_clk_wiz.xci" FileRelPathName="tb_hw_clk_wiz.xml"/>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="tb_hw_clk_wiz"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
+        <Define Name="MF_DISP_SIMULATION" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="package_constrs" Type="Constrs" RelSrcDir="$PSRCDIR/package_constrs">
       <File Path="$PSRCDIR/package_constrs/imports/new/timing.xdc">
         <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PSRCDIR/package_constrs/new/timing.xdc"/>
           <Attr Name="ImportTime" Val="1461596544"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -218,7 +172,6 @@
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/package_constrs/imports/new/timing.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -233,6 +186,58 @@
       </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="cdc_fifo_gen" Type="BlockSrcs" RelSrcDir="$PSRCDIR/cdc_fifo_gen">
+      <File Path="$PSRCDIR/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="cdc_fifo_gen"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="pal_bram_mem_gen" Type="BlockSrcs" RelSrcDir="$PSRCDIR/pal_bram_mem_gen">
+      <File Path="$PSRCDIR/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="pal_bram_mem_gen"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="fb_bram_mem_gen" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fb_bram_mem_gen">
+      <File Path="$PSRCDIR/sources_1/ip/fb_bram_mem_gen/fb_bram_mem_gen.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="fb_bram_mem_gen"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="tb_hw_clk_wiz" Type="BlockSrcs" RelSrcDir="$PSRCDIR/tb_hw_clk_wiz">
+      <File Path="$PSRCDIR/sources_1/ip/tb_hw_clk_wiz/tb_hw_clk_wiz.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="tb_hw_clk_wiz"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
   </FileSets>
@@ -261,9 +266,36 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="package_constrs" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="hw_tb_constrs" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="cdc_fifo_gen_synth_1" Type="Ft3:Synth" SrcSet="cdc_fifo_gen" Part="xc7a100tcsg324-1" ConstrsSet="cdc_fifo_gen" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/cdc_fifo_gen_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="pal_bram_mem_gen_synth_1" Type="Ft3:Synth" SrcSet="pal_bram_mem_gen" Part="xc7a100tcsg324-1" ConstrsSet="pal_bram_mem_gen" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/pal_bram_mem_gen_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="fb_bram_mem_gen_synth_1" Type="Ft3:Synth" SrcSet="fb_bram_mem_gen" Part="xc7a100tcsg324-1" ConstrsSet="fb_bram_mem_gen" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/fb_bram_mem_gen_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -277,7 +309,7 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="package_constrs" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="hw_tb_constrs" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
@@ -291,6 +323,54 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="cdc_fifo_gen_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="cdc_fifo_gen" Description="Vivado Implementation Defaults" SynthRun="cdc_fifo_gen_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="pal_bram_mem_gen_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="pal_bram_mem_gen" Description="Vivado Implementation Defaults" SynthRun="pal_bram_mem_gen_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="fb_bram_mem_gen_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="fb_bram_mem_gen" Description="Vivado Implementation Defaults" SynthRun="fb_bram_mem_gen_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
     </Run>
     <Run Id="tb_hw_clk_wiz_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="tb_hw_clk_wiz" Description="Vivado Implementation Defaults" SynthRun="tb_hw_clk_wiz_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">

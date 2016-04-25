@@ -34,10 +34,10 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="mf_disp_palette_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="hw_handoff/mf_disp_palette.hwh"/>
         <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="ip/mf_disp_palette_palette_blk_mem_gen_0/mf_disp_palette_palette_blk_mem_gen_0.xci"/>
         <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="hw_handoff/mf_disp_palette_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="hw_handoff/mf_disp_palette.hwh"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="mf_disp_palette_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="mf_disp_palette.bd" FileRelPathName="hdl/mf_disp_palette.v"/>
       </File>
       <File Path="$PPRDIR/../bd/mf_disp_cdc_fifo/mf_disp_cdc_fifo.bd">
@@ -46,11 +46,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="mf_disp_cdc_fifo_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="hw_handoff/mf_disp_cdc_fifo.hwh"/>
-        <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="ip/mf_disp_cdc_fifo_fifo_generator_0_0/mf_disp_cdc_fifo_fifo_generator_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="hw_handoff/mf_disp_cdc_fifo_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="mf_disp_cdc_fifo_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="hdl/mf_disp_cdc_fifo.v"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_cdc_fifo.bd" FileRelPathName="ip/mf_disp_cdc_fifo_fifo_generator_0_0/mf_disp_cdc_fifo_fifo_generator_0_0.xci"/>
       </File>
       <File Path="$PPRDIR/include/mf_disp_conf.vh">
         <FileInfo>
@@ -127,10 +127,10 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="mf_disp_vga_clk_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="hw_handoff/mf_disp_vga_clk.hwh"/>
         <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="ip/mf_disp_vga_clk_vga_clk_wiz_0/mf_disp_vga_clk_vga_clk_wiz_0.xci"/>
         <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="hw_handoff/mf_disp_vga_clk_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="hw_handoff/mf_disp_vga_clk.hwh"/>
+        <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="mf_disp_vga_clk_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="mf_disp_vga_clk.bd" FileRelPathName="hdl/mf_disp_vga_clk.v"/>
       </File>
       <File Path="$PPRDIR/../../../component.xml">

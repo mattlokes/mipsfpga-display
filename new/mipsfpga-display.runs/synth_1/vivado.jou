@@ -2,11 +2,11 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Mon Apr 25 16:12:40 2016
-# Process ID: 12048
-# Current directory: C:/Users/matt.lokes/mipsfpga-display/mipsfpga-display.runs/synth_1
-# Command line: vivado.exe -log mipsfpga_display.vds -mode batch -messageDb vivado.pb -notrace -source mipsfpga_display.tcl
-# Log file: C:/Users/matt.lokes/mipsfpga-display/mipsfpga-display.runs/synth_1/mipsfpga_display.vds
-# Journal file: C:/Users/matt.lokes/mipsfpga-display/mipsfpga-display.runs/synth_1\vivado.jou
+# Start of session at: Mon Apr 25 22:00:26 2016
+# Process ID: 6260
+# Current directory: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1
+# Command line: vivado.exe -log mf_disp_hw_axi_tb.vds -mode batch -messageDb vivado.pb -notrace -source mf_disp_hw_axi_tb.tcl
+# Log file: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/mf_disp_hw_axi_tb.vds
+# Journal file: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source mipsfpga_display.tcl -notrace
+source mf_disp_hw_axi_tb.tcl -notrace
