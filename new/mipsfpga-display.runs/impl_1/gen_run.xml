@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1461618248">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1461711377">
   <File Type="OPT-DCP" Name="mf_disp_hw_axi_tb_opt.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
@@ -138,7 +138,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/proj/src/mf_disp_sync.v">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../Projects/mipsfpga-display/src/verilog/proj/src/mf_disp_sync.v"/>
         <Attr Name="ImportTime" Val="1461579088"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -170,6 +169,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/hw_tb_constrs/imports/hw_tb_constrs/mf_disp_hw_tb_pins.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

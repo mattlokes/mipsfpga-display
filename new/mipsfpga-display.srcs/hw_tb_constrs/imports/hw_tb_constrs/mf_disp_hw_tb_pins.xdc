@@ -4,10 +4,15 @@
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
  
 ## Clock signal
+create_clock -period 10.00 -waveform {0 5} [get_ports {CLK100MHZ}];
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { CLK100MHZ}]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 #create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports {sys_clk}];
-create_clock -period 10.00 -waveform {0 5} [get_ports {CLK100MHZ}];
- 
+
+
+set_max_delay -datapath_only -from [get_cells mf_disp_axi_top_inst/disp/en_sync_sp/reg_a_0_reg] -to [get_cells mf_disp_axi_top_inst/disp/en_sync_sp/reg_b_0_reg] 5.000
+set_max_delay -datapath_only -from [get_cells mf_disp_axi_top_inst/disp/tm_sync_sp/reg_a_0_reg] -to [get_cells mf_disp_axi_top_inst/disp/tm_sync_sp/reg_b_0_reg] 5.000
+set_max_delay -datapath_only -from [get_cells mf_disp_axi_top_inst/disp/dm_sync_sp/reg_a_0_reg] -to [get_cells mf_disp_axi_top_inst/disp/dm_sync_sp/reg_b_0_reg] 5.000
+set_max_delay -datapath_only -from [get_cells mf_disp_axi_top_inst/disp/fb/fs_sync_ps/reg_a_0_reg] -to [get_cells mf_disp_axi_top_inst/disp/fb/fs_sync_ps/reg_b_0_reg] 5.000
  
 ##Switches 
 #set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { SW[0] }]; #IO_L24N_T3_RS0_15 Sch=sw[0]

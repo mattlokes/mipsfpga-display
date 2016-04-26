@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Mon Apr 25 22:04:59 2016
+| Date         : Tue Apr 26 23:57:42 2016
 | Host         : matt-windows running 64-bit major release  (build 9200)
 | Command      : report_io -file mf_disp_hw_axi_tb_io_placed.rpt
 | Design       : mf_disp_hw_axi_tb

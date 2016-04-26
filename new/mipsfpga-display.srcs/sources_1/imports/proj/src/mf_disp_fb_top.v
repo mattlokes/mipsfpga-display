@@ -20,11 +20,11 @@
 `include "mf_disp_conf.vh"
 
 module mf_disp_fb_top(
-
+   input   wire           resetn,
    input   wire           sys_clk,         //Sys Clk
    input   wire           pix_clk,        //Interface Clock
    
-   input   wire           fb_active_sel,   //Frame0 /1 Select, For double buffering
+   input   wire           pix_fb_active_sel,   //Frame0 /1 Select, For double buffering
    
    input   wire           fb_wr_vld,
    input   wire [15:0]    fb_wr_addr,
@@ -44,7 +44,7 @@ module mf_disp_fb_top(
 
  reg pix_rd_vld_dly;
  reg [15:0] pix_rd_addr_dly;
- reg fb_active_sel_dly;
+ wire sys_fb_active_sel;
 
  wire [31:0] fb_rd_data;
  wire [17:0] pix_rd_data;
@@ -60,8 +60,15 @@ module mf_disp_fb_top(
  always @(posedge pix_clk) begin
     pix_rd_vld_dly    <= pix_rd_vld;
     pix_rd_addr_dly   <= pix_rd_addr[15:0];
-    fb_active_sel_dly <= fb_active_sel;
  end   
+ 
+ mf_disp_sync fs_sync_ps (
+    .resetn    ( resetn ),
+    .clk_a     ( pix_clk ),
+    .clk_b     ( sys_clk ),
+    .in_a      ( pix_fb_active_sel ),
+    .out_b     ( sys_fb_active_sel )
+ );
     
     
  //128kiB Memory Frame Buffer Instantiation   
@@ -70,12 +77,12 @@ fb_bram_mem_gen fb_ram (
     .clka  ( sys_clk ),
     .ena   ( fb_wr_vld ),
     .wea   ( {4{fb_wr_vld}} ),
-    .addra ( {fb_wr_addr[15:2], fb_active_sel} ),
+    .addra ( {fb_wr_addr[15:2], sys_fb_active_sel} ),
     .dina  ( fb_wr_data[31:0] ),
     //Frame Buffer Read Data
     .clkb  ( pix_clk ),
     .enb   ( pix_rd_vld_dly ),
-    .addrb ( {pix_rd_addr_dly[15:2], ~fb_active_sel_dly} ),
+    .addrb ( {pix_rd_addr_dly[15:2], ~pix_fb_active_sel } ),
     .doutb ( fb_rd_data[31:0] )
 );
  

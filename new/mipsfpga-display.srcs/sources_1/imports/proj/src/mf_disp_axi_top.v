@@ -13,7 +13,7 @@
 		// Width of S_AXI data bus
 		parameter integer C_S_AXI_DATA_WIDTH	= 32,
 		// Width of S_AXI address bus
-		parameter integer C_S_AXI_ADDR_WIDTH	= 10,
+		parameter integer C_S_AXI_ADDR_WIDTH	= 16,
 		// Width of optional user defined signal in write address channel
 		parameter integer C_S_AXI_AWUSER_WIDTH	= 0,
 		// Width of optional user defined signal in read address channel
@@ -183,14 +183,14 @@
 	reg  	axi_awready;
 	reg  	axi_wready;
 	reg [1 : 0] 	axi_bresp;
-	reg [C_S_AXI_BUSER_WIDTH-1 : 0] 	axi_buser;
+	//reg [C_S_AXI_BUSER_WIDTH-1 : 0] 	axi_buser;
 	reg  	axi_bvalid;
 	reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_araddr;
 	reg  	axi_arready;
 	reg [C_S_AXI_DATA_WIDTH-1 : 0] 	axi_rdata;
 	reg [1 : 0] 	axi_rresp;
 	reg  	axi_rlast;
-	reg [C_S_AXI_RUSER_WIDTH-1 : 0] 	axi_ruser;
+	//reg [C_S_AXI_RUSER_WIDTH-1 : 0] 	axi_ruser;
 	reg  	axi_rvalid;
 	// aw_wrap_en determines wrap boundary and enables wrapping
 	wire aw_wrap_en;
@@ -236,13 +236,13 @@
 	assign S_AXI_AWREADY	= axi_awready;
 	assign S_AXI_WREADY	= axi_wready;
 	assign S_AXI_BRESP	= axi_bresp;
-	assign S_AXI_BUSER	= axi_buser;
+	assign S_AXI_BUSER	= 1'b0;//axi_buser;
 	assign S_AXI_BVALID	= axi_bvalid;
 	assign S_AXI_ARREADY	= axi_arready;
 	assign S_AXI_RDATA	= axi_rdata;
 	assign S_AXI_RRESP	= axi_rresp;
 	assign S_AXI_RLAST	= axi_rlast;
-	assign S_AXI_RUSER	= axi_ruser;
+	assign S_AXI_RUSER	= 1'b0;//axi_ruser;
 	assign S_AXI_RVALID	= axi_rvalid;
 	assign S_AXI_BID = S_AXI_AWID;
 	assign S_AXI_RID = S_AXI_ARID;

@@ -189,7 +189,7 @@ always @(posedge vga_clk, negedge resetn) begin : resolution_map_pointer_logic
             end
             else begin                         //Double Mode
                if (frame_x_ptr[0]) mapped_frame_ptr[16:0] <= mapped_frame_ptr + 1'b1;  //Odd Pixel only increment
-               if (frame_y_ptr[0] && (frame_x_ptr>=10'd640) ) mapped_frame_ptr[16:0] <= mapped_frame_ptr - 1'b321;  //Odd line repeat       
+               if (frame_y_ptr[0] && (frame_x_ptr>=10'd640) ) mapped_frame_ptr[16:0] <= mapped_frame_ptr - 17'd321;  //Odd line repeat       
             end
          end
       end

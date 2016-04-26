@@ -110,7 +110,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/proj/src/mf_disp_sync.v">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Projects/mipsfpga-display/src/verilog/proj/src/mf_disp_sync.v"/>
           <Attr Name="ImportTime" Val="1461579088"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -185,6 +184,7 @@
         </FileInfo>
       </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/hw_tb_constrs/imports/hw_tb_constrs/mf_disp_hw_tb_pins.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>

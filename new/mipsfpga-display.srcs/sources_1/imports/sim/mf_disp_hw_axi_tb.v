@@ -73,6 +73,8 @@ wire send_cmd;
 wire sys_clk;
 wire pix_clk;
 
+genvar g;
+
 //Testbench Commands
 //assign tb_cmds[0][95:0] = { 32'd1000, 32'h0000FE00, 32'h00000005 }; //Enable & TestMode
 assign tb_cmds[0][95:0] = { 32'd10, 32'h0000FA00, 32'h00000000 }; //Set Pal0  to Black
@@ -99,6 +101,11 @@ assign tb_cmds[16][95:0] = { 32'd42, 32'h0000FE04, 32'h00000001 }; //Switch Fram
 assign tb_cmds[17][95:0] = { 32'd60, 32'h0000FE00, 32'h00000001 }; //Enable
 
 assign tb_cmds[18][95:0] = { 32'd0,    32'h00000000, 32'h00000000 };
+
+generate for( g=19; g< 256; g=g+1) begin : gen_unused_cmds
+   assign tb_cmds[g][95:0] = 96'h0;
+end
+endgenerate
 
 wire wr_in_prog;
 wire wr_done;

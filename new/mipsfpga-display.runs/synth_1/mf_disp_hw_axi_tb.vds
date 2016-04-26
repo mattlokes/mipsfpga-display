@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Mon Apr 25 22:00:26 2016
-# Process ID: 6260
+# Start of session at: Tue Apr 26 23:56:18 2016
+# Process ID: 560
 # Current directory: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1
 # Command line: vivado.exe -log mf_disp_hw_axi_tb.vds -mode batch -messageDb vivado.pb -notrace -source mf_disp_hw_axi_tb.tcl
 # Log file: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/mf_disp_hw_axi_tb.vds
@@ -16,17 +16,16 @@ Command: synth_design -top mf_disp_hw_axi_tb -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
-WARNING: [Synth 8-2292] literal value truncated to fit in 1 bits [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_intf_vga_top.v:192]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 273.379 ; gain = 102.305
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 263.086 ; gain = 91.785
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'mf_disp_hw_axi_tb' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:24]
 	Parameter IDLE bound to: 0 - type: integer 
 	Parameter AWVALID bound to: 1 - type: integer 
 	Parameter WVALID bound to: 2 - type: integer 
 	Parameter DONE bound to: 3 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'tb_hw_clk_wiz' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/realtime/tb_hw_clk_wiz_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'tb_hw_clk_wiz' (1#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/realtime/tb_hw_clk_wiz_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'tb_hw_clk_wiz' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/realtime/tb_hw_clk_wiz_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'tb_hw_clk_wiz' (1#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/realtime/tb_hw_clk_wiz_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'mf_disp_axi_top' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_axi_top.v:4]
 	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -45,124 +44,27 @@ INFO: [Synth 8-256] done synthesizing module 'mf_disp_addr_dec' (2#1) [C:/Users/
 INFO: [Synth 8-638] synthesizing module 'mf_disp_cmd_reg_top' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_cmd_reg_top.v:23]
 INFO: [Synth 8-256] done synthesizing module 'mf_disp_cmd_reg_top' (3#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_cmd_reg_top.v:23]
 INFO: [Synth 8-638] synthesizing module 'mf_disp_fb_top' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_fb_top.v:22]
-INFO: [Synth 8-638] synthesizing module 'fb_bram_mem_gen' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/realtime/fb_bram_mem_gen_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'fb_bram_mem_gen' (4#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/realtime/fb_bram_mem_gen_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'pal_bram_mem_gen' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/realtime/pal_bram_mem_gen_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'pal_bram_mem_gen' (5#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/realtime/pal_bram_mem_gen_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'mf_disp_fb_top' (6#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_fb_top.v:22]
+INFO: [Synth 8-638] synthesizing module 'mf_disp_sync' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_sync.v:22]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_sync.v:33]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_sync.v:35]
+INFO: [Synth 8-256] done synthesizing module 'mf_disp_sync' (4#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_sync.v:22]
+INFO: [Synth 8-638] synthesizing module 'fb_bram_mem_gen' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/realtime/fb_bram_mem_gen_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'fb_bram_mem_gen' (5#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/realtime/fb_bram_mem_gen_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'pal_bram_mem_gen' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/realtime/pal_bram_mem_gen_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'pal_bram_mem_gen' (6#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/realtime/pal_bram_mem_gen_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'mf_disp_fb_top' (7#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_fb_top.v:22]
 INFO: [Synth 8-638] synthesizing module 'mf_disp_syncs' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_syncs.v:23]
 	Parameter NUM bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'cdc_fifo_gen' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/realtime/cdc_fifo_gen_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'cdc_fifo_gen' (7#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/realtime/cdc_fifo_gen_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'mf_disp_syncs' (8#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_syncs.v:23]
+INFO: [Synth 8-638] synthesizing module 'cdc_fifo_gen' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/realtime/cdc_fifo_gen_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'cdc_fifo_gen' (8#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/realtime/cdc_fifo_gen_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'mf_disp_syncs' (9#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_syncs.v:23]
 INFO: [Synth 8-638] synthesizing module 'mf_disp_intf_vga_top' [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_intf_vga_top.v:23]
-INFO: [Synth 8-256] done synthesizing module 'mf_disp_intf_vga_top' (9#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_intf_vga_top.v:23]
-INFO: [Synth 8-256] done synthesizing module 'mf_disp_top' (10#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_top.v:23]
-WARNING: [Synth 8-3848] Net axi_buser in module/entity mf_disp_axi_top does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_axi_top.v:186]
-WARNING: [Synth 8-3848] Net axi_ruser in module/entity mf_disp_axi_top does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_axi_top.v:193]
-INFO: [Synth 8-256] done synthesizing module 'mf_disp_axi_top' (11#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_axi_top.v:4]
-WARNING: [Synth 8-3848] Net tb_cmds[255] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[254] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[253] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[252] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[251] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[250] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[249] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[248] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[247] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[246] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[245] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[244] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[243] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[242] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[241] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[240] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[239] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[238] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[237] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[236] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[235] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[234] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[233] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[232] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[231] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[230] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[229] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[228] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[227] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[226] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[225] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[224] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[223] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[222] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[221] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[220] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[219] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[218] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[217] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[216] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[215] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[214] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[213] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[212] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[211] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[210] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[209] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[208] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[207] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[206] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[205] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[204] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[203] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[202] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[201] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[200] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[199] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[198] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[197] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[196] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[195] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[194] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[193] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[192] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[191] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[190] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[189] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[188] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[187] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[186] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[185] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[184] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[183] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[182] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[181] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[180] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[179] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[178] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[177] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[176] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[175] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[174] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[173] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[172] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[171] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[170] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[169] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[168] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[167] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[166] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[165] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[164] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[163] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[162] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[161] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[160] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[159] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-WARNING: [Synth 8-3848] Net tb_cmds[158] in module/entity mf_disp_hw_axi_tb does not have driver. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:68]
-INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'mf_disp_hw_axi_tb' (12#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:24]
+INFO: [Synth 8-256] done synthesizing module 'mf_disp_intf_vga_top' (10#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_intf_vga_top.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mf_disp_top' (11#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_top.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mf_disp_axi_top' (12#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/proj/src/mf_disp_axi_top.v:4]
+INFO: [Synth 8-256] done synthesizing module 'mf_disp_hw_axi_tb' (13#1) [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v:24]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 303.273 ; gain = 132.199
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 300.410 ; gain = 129.109
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -172,23 +74,23 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 303.273 ; gain = 132.199
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 300.410 ; gain = 129.109
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/dcp/cdc_fifo_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync'
-Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/dcp/cdc_fifo_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync'
-Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/dcp_2/pal_bram_mem_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/fb/pal_ram'
-Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/dcp_2/pal_bram_mem_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/fb/pal_ram'
-Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/dcp_3/fb_bram_mem_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/fb/fb_ram'
-Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/dcp_3/fb_bram_mem_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/fb/fb_ram'
-Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/dcp_4/tb_hw_clk_wiz_in_context.xdc] for cell 'vga_clk'
-Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/dcp_4/tb_hw_clk_wiz_in_context.xdc] for cell 'vga_clk'
+Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/dcp/cdc_fifo_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync'
+Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/dcp/cdc_fifo_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync'
+Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/dcp_2/pal_bram_mem_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/fb/pal_ram'
+Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/dcp_2/pal_bram_mem_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/fb/pal_ram'
+Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/dcp_3/fb_bram_mem_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/fb/fb_ram'
+Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/dcp_3/fb_bram_mem_gen_in_context.xdc] for cell 'mf_disp_axi_top_inst/disp/fb/fb_ram'
+Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/dcp_4/tb_hw_clk_wiz_in_context.xdc] for cell 'vga_clk'
+Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/dcp_4/tb_hw_clk_wiz_in_context.xdc] for cell 'vga_clk'
 Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/hw_tb_constrs/imports/hw_tb_constrs/mf_disp_hw_tb_pins.xdc]
-WARNING: [Constraints 18-619] A clock with name 'CLK100MHZ' already exists, overwriting the previous clock with the same name. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/hw_tb_constrs/imports/hw_tb_constrs/mf_disp_hw_tb_pins.xdc:9]
+WARNING: [Constraints 18-619] A clock with name 'CLK100MHZ' already exists, overwriting the previous clock with the same name. [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/hw_tb_constrs/imports/hw_tb_constrs/mf_disp_hw_tb_pins.xdc:7]
 Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/hw_tb_constrs/imports/hw_tb_constrs/mf_disp_hw_tb_pins.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/hw_tb_constrs/imports/hw_tb_constrs/mf_disp_hw_tb_pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mf_disp_hw_axi_tb_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/mf_disp_hw_axi_tb_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -197,23 +99,23 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 615.473 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 603.840 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-6260-/dcp_4/tb_hw_clk_wiz_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/synth_1/.Xil/Vivado-560-/dcp_4/tb_hw_clk_wiz_in_context.xdc, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'cstate_reg' in module 'mf_disp_hw_axi_tb'
 INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -228,7 +130,7 @@ INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address s
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'cstate_reg' using encoding 'sequential' in module 'mf_disp_hw_axi_tb'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -255,8 +157,9 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 3     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 13    
+	                1 Bit    Registers := 24    
 +---Muxes : 
+	 256 Input     70 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
 	   2 Input     17 Bit        Muxes := 7     
 	   4 Input     16 Bit        Muxes := 1     
@@ -282,6 +185,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	                8 Bit    Registers := 1     
 +---Muxes : 
+	 256 Input     70 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
@@ -293,11 +197,15 @@ Module mf_disp_cmd_reg_top
 Detailed RTL Component Info : 
 +---Registers : 
 	                3 Bit    Registers := 1     
+Module mf_disp_sync 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
 Module mf_disp_fb_top 
 Detailed RTL Component Info : 
 +---Registers : 
 	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 Module mf_disp_syncs 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -347,14 +255,14 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 615.473 ; gain = 444.398
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Parallel Reinference  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 603.840 ; gain = 432.539
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -364,43 +272,53 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (mf_disp_axi_top_inst/axi_arready_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (mf_disp_axi_top_inst/axi_arv_arr_flag_reg)
-INFO: [Synth 8-3886] merging instance 'mf_disp_axi_top_inst/\axi_awaddr_reg[1] ' (FDRE) to 'mf_disp_axi_top_inst/\axi_awaddr_reg[0] '
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (mf_disp_axi_top_inst/\axi_awaddr_reg[0] )
-WARNING: [Synth 8-3332] Sequential element (\axi_awaddr_reg[1] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_awaddr_reg[0] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\disp/fb/pix_rd_addr_dly_reg[1] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\disp/fb/pix_rd_addr_dly_reg[0] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_arlen_cntr_reg[7] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_arlen_cntr_reg[6] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_arlen_cntr_reg[5] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_arlen_cntr_reg[4] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_arlen_cntr_reg[3] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_arlen_cntr_reg[2] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_arlen_cntr_reg[1] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_arlen_cntr_reg[0] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (axi_rvalid_reg) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (axi_arready_reg) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (axi_arv_arr_flag_reg) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (axi_bvalid_reg) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_bresp_reg[1] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_bresp_reg[0] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_rresp_reg[1] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_rresp_reg[0] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (axi_rlast_reg) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_awlen_cntr_reg[7] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_awlen_cntr_reg[6] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_awlen_cntr_reg[5] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_awlen_cntr_reg[4] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_awlen_cntr_reg[3] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_awlen_cntr_reg[2] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_awlen_cntr_reg[1] ) is unused and will be removed from module mf_disp_axi_top.
-WARNING: [Synth 8-3332] Sequential element (\axi_awlen_cntr_reg[0] ) is unused and will be removed from module mf_disp_axi_top.
+INFO: [Synth 8-3886] merging instance '\mf_disp_axi_top_inst/axi_awaddr_reg[1] ' (FDRE) to '\mf_disp_axi_top_inst/axi_awaddr_reg[0] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mf_disp_axi_top_inst/axi_awaddr_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mf_disp_axi_top_inst/axi_arready_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mf_disp_axi_top_inst/axi_arv_arr_flag_reg )
+INFO: [Synth 8-3886] merging instance '\mf_disp_axi_top_inst/axi_awaddr_reg[4] ' (FDRE) to '\mf_disp_axi_top_inst/axi_awaddr_reg[8] '
+INFO: [Synth 8-3886] merging instance '\mf_disp_axi_top_inst/axi_awaddr_reg[5] ' (FDRE) to '\mf_disp_axi_top_inst/axi_awaddr_reg[8] '
+INFO: [Synth 8-3886] merging instance '\mf_disp_axi_top_inst/axi_awaddr_reg[6] ' (FDRE) to '\mf_disp_axi_top_inst/axi_awaddr_reg[7] '
+INFO: [Synth 8-3886] merging instance '\mf_disp_axi_top_inst/axi_awaddr_reg[14] ' (FDRE) to '\mf_disp_axi_top_inst/axi_awaddr_reg[15] '
+INFO: [Synth 8-3886] merging instance '\mf_disp_axi_top_inst/axi_awaddr_reg[15] ' (FDRE) to '\mf_disp_axi_top_inst/axi_awaddr_reg[13] '
+INFO: [Synth 8-3886] merging instance '\mf_disp_axi_top_inst/axi_awaddr_reg[13] ' (FDRE) to '\mf_disp_axi_top_inst/axi_awaddr_reg[12] '
+INFO: [Synth 8-3886] merging instance '\mf_disp_axi_top_inst/axi_awaddr_reg[12] ' (FDRE) to '\mf_disp_axi_top_inst/axi_awaddr_reg[11] '
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awaddr_reg[15] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awaddr_reg[14] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awaddr_reg[13] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awaddr_reg[12] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awaddr_reg[6] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awaddr_reg[5] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awaddr_reg[4] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awaddr_reg[1] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awaddr_reg[0] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/disp/fb/pix_rd_addr_dly_reg[1] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/disp/fb/pix_rd_addr_dly_reg[0] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_arlen_cntr_reg[7] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_arlen_cntr_reg[6] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_arlen_cntr_reg[5] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_arlen_cntr_reg[4] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_arlen_cntr_reg[3] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_arlen_cntr_reg[2] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_arlen_cntr_reg[1] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_arlen_cntr_reg[0] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_rvalid_reg ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_arready_reg ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_arv_arr_flag_reg ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_bvalid_reg ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_rlast_reg ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awlen_cntr_reg[7] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awlen_cntr_reg[6] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awlen_cntr_reg[5] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awlen_cntr_reg[4] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awlen_cntr_reg[3] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awlen_cntr_reg[2] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awlen_cntr_reg[1] ) is unused and will be removed from module mf_disp_hw_axi_tb.
+WARNING: [Synth 8-3332] Sequential element (\mf_disp_axi_top_inst/axi_awlen_cntr_reg[0] ) is unused and will be removed from module mf_disp_hw_axi_tb.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 603.840 ; gain = 432.539
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -418,10 +336,10 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'vga_clk/clk_out2' to pin 
 WARNING: [Synth 8-565] redefining clock 'CLK100MHZ'
 INFO: Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -433,16 +351,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 603.840 ; gain = 432.539
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -459,7 +377,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -472,7 +390,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -484,25 +402,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -526,14 +444,14 @@ Report Cell Usage:
 |2     |fb_bram_mem_gen  |     1|
 |3     |pal_bram_mem_gen |     1|
 |4     |tb_hw_clk_wiz    |     1|
-|5     |CARRY4           |    27|
-|6     |LUT1             |    83|
-|7     |LUT2             |    23|
-|8     |LUT3             |    26|
-|9     |LUT4             |    55|
-|10    |LUT5             |    46|
-|11    |LUT6             |    80|
-|12    |FDCE             |   104|
+|5     |CARRY4           |    19|
+|6     |LUT1             |    69|
+|7     |LUT2             |    18|
+|8     |LUT3             |    36|
+|9     |LUT4             |    56|
+|10    |LUT5             |    41|
+|11    |LUT6             |    65|
+|12    |FDCE             |   108|
 |13    |FDRE             |    34|
 |14    |IBUF             |     1|
 |15    |OBUF             |    14|
@@ -543,22 +461,26 @@ Report Instance Areas:
 +------+-----------------------+---------------------+------+
 |      |Instance               |Module               |Cells |
 +------+-----------------------+---------------------+------+
-|1     |top                    |                     |   551|
-|2     |  mf_disp_axi_top_inst |mf_disp_axi_top      |   416|
-|3     |    disp               |mf_disp_top          |   334|
-|4     |      cmd              |mf_disp_cmd_reg_top  |     6|
-|5     |      fb               |mf_disp_fb_top       |    85|
-|6     |      intf             |mf_disp_intf_vga_top |   222|
-|7     |      intf_syncs       |mf_disp_syncs        |    21|
+|1     |top                    |                     |   519|
+|2     |  mf_disp_axi_top_inst |mf_disp_axi_top      |   380|
+|3     |    disp               |mf_disp_top          |   353|
+|4     |      cmd              |mf_disp_cmd_reg_top  |     7|
+|5     |      dm_sync_sp       |mf_disp_sync         |     3|
+|6     |      en_sync_sp       |mf_disp_sync_0       |     3|
+|7     |      fb               |mf_disp_fb_top       |    93|
+|8     |        fs_sync_ps     |mf_disp_sync_2       |     3|
+|9     |      intf             |mf_disp_intf_vga_top |   226|
+|10    |      intf_syncs       |mf_disp_syncs        |    18|
+|11    |      tm_sync_sp       |mf_disp_sync_1       |     3|
 +------+-----------------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 615.473 ; gain = 444.398
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 603.840 ; gain = 432.539
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 615.473 ; gain = 110.145
-Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 615.473 ; gain = 444.398
+Synthesis finished with 0 errors, 0 critical warnings and 33 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 603.840 ; gain = 107.176
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 603.840 ; gain = 432.539
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -566,8 +488,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 134 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 615.473 ; gain = 424.328
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 615.473 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 25 22:01:06 2016...
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 603.840 ; gain = 413.699
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.036 . Memory (MB): peak = 603.840 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 26 23:56:58 2016...
