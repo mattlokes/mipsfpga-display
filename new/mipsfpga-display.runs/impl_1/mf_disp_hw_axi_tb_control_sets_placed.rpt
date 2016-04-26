@@ -1,0 +1,77 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Apr 25 22:04:59 2016
+| Host         : matt-windows running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file mf_disp_hw_axi_tb_control_sets_placed.rpt
+| Design       : mf_disp_hw_axi_tb
+| Device       : xc7a100t
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    24 |
+| Minimum Number of register sites lost to control set restrictions |    96 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              24 |           11 |
+| No           | No                    | Yes                    |              66 |           24 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              12 |            3 |
+| Yes          | No                    | Yes                    |             108 |           30 |
+| Yes          | Yes                   | No                     |              14 |            5 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|      Clock Signal      |                                                                    Enable Signal                                                                    |                                                                Set/Reset Signal                                                               | Slice Load Count | Bel Load Count |
++------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  vga_clk/inst/clk_out2 |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_wr_reg2                                  |                1 |              1 |
+|  vga_clk/inst/clk_out2 |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_d2                                       |                1 |              1 |
+|  vga_clk/inst/clk_out1 |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_rd_reg2                                  |                1 |              1 |
+|  vga_clk/inst/clk_out1 | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0]                   | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[0]                                         |                1 |              1 |
+|  vga_clk/inst/clk_out2 |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg[1]_i_1_n_0 |                1 |              2 |
+|  vga_clk/inst/clk_out1 |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[2]                                         |                1 |              2 |
+|  vga_clk/inst/clk_out1 |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1_n_0 |                2 |              3 |
+|  vga_clk/inst/clk_out2 |                                                                                                                                                     |                                                                                                                                               |                2 |              5 |
+|  vga_clk/inst/clk_out2 | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0]                   |                                                                                                                                               |                1 |              8 |
+|  vga_clk/inst/clk_out2 | tb_ptr[7]_i_1_n_0                                                                                                                                   | mf_disp_axi_top_inst/disp/intf/h_count_reg[4]_0                                                                                               |                3 |              8 |
+|  vga_clk/inst/clk_out1 | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/gc0.count_d1_reg[3][0] | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[2]                                         |                2 |              8 |
+|  vga_clk/inst/clk_out2 |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf/h_count_reg[4]_0                                                                                               |                6 |             10 |
+|  vga_clk/inst/clk_out1 | mf_disp_axi_top_inst/disp/intf/v_count[9]_i_1_n_0                                                                                                   | mf_disp_axi_top_inst/disp/intf/h_count_reg[4]_0                                                                                               |                3 |             10 |
+|  vga_clk/inst/clk_out1 | mf_disp_axi_top_inst/disp/intf/frame_y_ptr[9]_i_1_n_0                                                                                               | mf_disp_axi_top_inst/disp/intf/h_count_reg[4]_0                                                                                               |                3 |             10 |
+|  vga_clk/inst/clk_out1 | mf_disp_axi_top_inst/disp/intf/frame_x_ptr[9]_i_1_n_0                                                                                               | mf_disp_axi_top_inst/disp/intf/h_count_reg[4]_0                                                                                               |                3 |             10 |
+|  vga_clk/inst/clk_out2 | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0]                   | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gic0.gc0.count_reg[0][1]                     |                2 |             12 |
+|  vga_clk/inst/clk_out1 | mf_disp_axi_top_inst/disp/fb/pix_rd_vld_dly                                                                                                         |                                                                                                                                               |                3 |             12 |
+|  vga_clk/inst/clk_out2 | mf_disp_axi_top_inst/p_9_in                                                                                                                         | mf_disp_axi_top_inst/disp/intf/h_count_reg[4]_0                                                                                               |                5 |             14 |
+|  vga_clk/inst/clk_out1 |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf/h_count_reg[4]_0                                                                                               |                4 |             14 |
+|  vga_clk/inst/clk_out2 |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gic0.gc0.count_reg[0][0]                     |                3 |             16 |
+|  vga_clk/inst/clk_out1 |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[1]                                         |                4 |             16 |
+|  vga_clk/inst/clk_out1 | mf_disp_axi_top_inst/disp/intf/mapped_frame_ptr[16]_i_1_n_0                                                                                         | mf_disp_axi_top_inst/disp/intf/h_count_reg[4]_0                                                                                               |                5 |             17 |
+|  vga_clk/inst/clk_out1 |                                                                                                                                                     |                                                                                                                                               |                9 |             19 |
+|  vga_clk/inst/clk_out2 | tb_tick                                                                                                                                             | mf_disp_axi_top_inst/disp/intf/h_count_reg[4]_0                                                                                               |                8 |             32 |
++------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
