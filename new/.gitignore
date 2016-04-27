@@ -88,6 +88,6 @@
 !*.bmm
 !*.xmp
 
-mipsfpga_display.cache
-mipsfpga_display.runs
+mipsfpga-display.cache
+mipsfpga-display.runs
 ip_shared

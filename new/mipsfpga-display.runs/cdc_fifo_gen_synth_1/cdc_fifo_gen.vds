@@ -2,12 +2,12 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Mon Apr 25 19:46:47 2016
-# Process ID: 10296
-# Current directory: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/cdc_fifo_gen_synth_1
+# Start of session at: Wed Apr 27 09:59:05 2016
+# Process ID: 3204
+# Current directory: C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.runs/cdc_fifo_gen_synth_1
 # Command line: vivado.exe -log cdc_fifo_gen.vds -mode batch -messageDb vivado.pb -notrace -source cdc_fifo_gen.tcl
-# Log file: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/cdc_fifo_gen_synth_1/cdc_fifo_gen.vds
-# Journal file: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/cdc_fifo_gen_synth_1\vivado.jou
+# Log file: C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.runs/cdc_fifo_gen_synth_1/cdc_fifo_gen.vds
+# Journal file: C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.runs/cdc_fifo_gen_synth_1\vivado.jou
 #-----------------------------------------------------------
 source cdc_fifo_gen.tcl -notrace
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
@@ -15,19 +15,19 @@ WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:1.0 avai
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'cdc_fifo_gen' generated file not found 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'cdc_fifo_gen' generated file not found 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'cdc_fifo_gen' generated file not found 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'cdc_fifo_gen' generated file not found 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'cdc_fifo_gen' generated file not found 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'cdc_fifo_gen' generated file not found 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'cdc_fifo_gen' generated file not found 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'cdc_fifo_gen' generated file not found 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'cdc_fifo_gen' generated file not found 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'cdc_fifo_gen' generated file not found 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_sim_netlist.vhdl'. Please regenerate to continue.
 Command: synth_design -top cdc_fifo_gen -part xc7a100tcsg324-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 303.871 ; gain = 132.742
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 307.566 ; gain = 134.582
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'cdc_fifo_gen' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/synth/cdc_fifo_gen.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'cdc_fifo_gen' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/synth/cdc_fifo_gen.vhd:73]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
 	Parameter C_DATA_COUNT_WIDTH bound to: 4 - type: integer 
@@ -229,8 +229,8 @@ INFO: [Synth 8-638] synthesizing module 'cdc_fifo_gen' [c:/Users/Matt/Projects/m
 	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_generator_v13_0_1' declared at 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0.vhd:137' bound to instance 'U0' of component 'fifo_generator_v13_0_1' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/synth/cdc_fifo_gen.vhd:531]
-INFO: [Synth 8-638] synthesizing module 'fifo_generator_v13_0_1' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0.vhd:676]
+INFO: [Synth 8-3491] module 'fifo_generator_v13_0_1' declared at 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0.vhd:137' bound to instance 'U0' of component 'fifo_generator_v13_0_1' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/synth/cdc_fifo_gen.vhd:531]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_v13_0_1' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0.vhd:676]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
 	Parameter C_DATA_COUNT_WIDTH bound to: 4 - type: integer 
@@ -432,7 +432,7 @@ INFO: [Synth 8-638] synthesizing module 'fifo_generator_v13_0_1' [c:/Users/Matt/
 	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'fifo_generator_v13_0_1_synth' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:33659]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_v13_0_1_synth' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:33659]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
 	Parameter C_DATA_COUNT_WIDTH bound to: 4 - type: integer 
@@ -634,8 +634,8 @@ INFO: [Synth 8-638] synthesizing module 'fifo_generator_v13_0_1_synth' [c:/Users
 	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:33723]
-INFO: [Synth 8-638] synthesizing module 'reset_blk_ramfifo' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12376]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:33723]
+INFO: [Synth 8-638] synthesizing module 'reset_blk_ramfifo' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12376]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_MEMORY_TYPE bound to: 2 - type: integer 
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
@@ -647,17 +647,17 @@ INFO: [Synth 8-638] synthesizing module 'reset_blk_ramfifo' [c:/Users/Matt/Proje
 	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
 	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12483]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12484]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12485]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12486]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12803]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12804]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12805]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12806]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12807]
-INFO: [Synth 8-256] done synthesizing module 'reset_blk_ramfifo' (1#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12376]
-INFO: [Synth 8-638] synthesizing module 'fifo_generator_top' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:32420]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12483]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12484]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12485]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12486]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12803]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12804]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12805]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12806]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12807]
+INFO: [Synth 8-256] done synthesizing module 'reset_blk_ramfifo' (1#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12376]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_top' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:32420]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_MEMORY_TYPE bound to: 2 - type: integer 
@@ -730,7 +730,7 @@ INFO: [Synth 8-638] synthesizing module 'fifo_generator_top' [c:/Users/Matt/Proj
 	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
 	Parameter C_WR_FREQ bound to: 1 - type: integer 
 	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'fifo_generator_ramfifo' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:20583]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_ramfifo' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:20583]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_MEMORY_TYPE bound to: 2 - type: integer 
@@ -786,7 +786,7 @@ INFO: [Synth 8-638] synthesizing module 'fifo_generator_ramfifo' [c:/Users/Matt/
 	Parameter C_USE_SYNC_CLK bound to: 0 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
 	Parameter C_AXI_TYPE bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'reset_blk_ramfifo__parameterized0' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12376]
+INFO: [Synth 8-638] synthesizing module 'reset_blk_ramfifo__parameterized0' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12376]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_MEMORY_TYPE bound to: 2 - type: integer 
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
@@ -798,8 +798,8 @@ INFO: [Synth 8-638] synthesizing module 'reset_blk_ramfifo__parameterized0' [c:/
 	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
 	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'reset_blk_ramfifo__parameterized0' (1#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12376]
-INFO: [Synth 8-638] synthesizing module 'input_blk' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:3996]
+INFO: [Synth 8-256] done synthesizing module 'reset_blk_ramfifo__parameterized0' (1#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:12376]
+INFO: [Synth 8-638] synthesizing module 'input_blk' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:3996]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_IMPLEMENTATION_TYPE bound to: 0 - type: integer 
 	Parameter C_DIN_WIDTH bound to: 4 - type: integer 
@@ -818,8 +818,8 @@ INFO: [Synth 8-638] synthesizing module 'input_blk' [c:/Users/Matt/Projects/mips
 	Parameter C_USE_INPUT_CE bound to: 0 - type: integer 
 	Parameter C_USE_OUTPUT_CE bound to: 0 - type: integer 
 	Parameter C_USE_SYNC_CLK bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'input_blk' (2#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:3996]
-INFO: [Synth 8-638] synthesizing module 'memory' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5632]
+INFO: [Synth 8-256] done synthesizing module 'input_blk' (2#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:3996]
+INFO: [Synth 8-638] synthesizing module 'memory' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5632]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_HAS_RST bound to: 1 - type: integer 
@@ -845,7 +845,7 @@ INFO: [Synth 8-638] synthesizing module 'memory' [c:/Users/Matt/Projects/mipsfpg
 	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
 	Parameter C_FIFO_TYPE bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'dmem' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5389]
+INFO: [Synth 8-638] synthesizing module 'dmem' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5389]
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_HAS_SRST bound to: 0 - type: integer 
 	Parameter C_COMMON_CLOCK bound to: 1 - type: integer 
@@ -859,24 +859,24 @@ INFO: [Synth 8-638] synthesizing module 'dmem' [c:/Users/Matt/Projects/mipsfpga-
 	Parameter C_SMALLER_DATA_WIDTH bound to: 4 - type: integer 
 	Parameter C_WR_PNTR_WIDTH bound to: 4 - type: integer 
 	Parameter C_FIFO_TYPE bound to: 0 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5403]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5418]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5422]
-INFO: [Synth 8-256] done synthesizing module 'dmem' (3#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5389]
-INFO: [Synth 8-256] done synthesizing module 'memory' (4#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5632]
-INFO: [Synth 8-638] synthesizing module 'clk_x_pntrs' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:13050]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5403]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5418]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5422]
+INFO: [Synth 8-256] done synthesizing module 'dmem' (3#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5389]
+INFO: [Synth 8-256] done synthesizing module 'memory' (4#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:5632]
+INFO: [Synth 8-638] synthesizing module 'clk_x_pntrs' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:13050]
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_RD_PNTR_WIDTH bound to: 4 - type: integer 
 	Parameter C_WR_PNTR_WIDTH bound to: 4 - type: integer 
 	Parameter C_MSGON_VAL bound to: 1 - type: integer 
 	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'synchronizer_ff' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:4763]
+INFO: [Synth 8-638] synthesizing module 'synchronizer_ff' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:4763]
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:4768]
-INFO: [Synth 8-256] done synthesizing module 'synchronizer_ff' (5#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:4763]
-INFO: [Synth 8-256] done synthesizing module 'clk_x_pntrs' (6#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:13050]
-INFO: [Synth 8-638] synthesizing module 'rd_logic' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:19688]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:4768]
+INFO: [Synth 8-256] done synthesizing module 'synchronizer_ff' (5#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:4763]
+INFO: [Synth 8-256] done synthesizing module 'clk_x_pntrs' (6#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:13050]
+INFO: [Synth 8-638] synthesizing module 'rd_logic' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:19688]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
 	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
@@ -899,23 +899,23 @@ INFO: [Synth 8-638] synthesizing module 'rd_logic' [c:/Users/Matt/Projects/mipsf
 	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 3 - type: integer 
 	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
 	Parameter C_FIFO_TYPE bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'rd_bin_cntr' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:8178]
+INFO: [Synth 8-638] synthesizing module 'rd_bin_cntr' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:8178]
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_HAS_SRST bound to: 0 - type: integer 
 	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
 	Parameter C_PNTR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'rd_bin_cntr' (7#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:8178]
-INFO: [Synth 8-638] synthesizing module 'rd_status_flags_as' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:8547]
+INFO: [Synth 8-256] done synthesizing module 'rd_bin_cntr' (7#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:8178]
+INFO: [Synth 8-638] synthesizing module 'rd_status_flags_as' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:8547]
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_RD_PNTR_WIDTH bound to: 4 - type: integer 
 	Parameter C_WR_PNTR_WIDTH bound to: 4 - type: integer 
 	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'compare' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:7562]
+INFO: [Synth 8-638] synthesizing module 'compare' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:7562]
 	Parameter C_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'compare' (8#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:7562]
-INFO: [Synth 8-256] done synthesizing module 'rd_status_flags_as' (9#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:8547]
-INFO: [Synth 8-256] done synthesizing module 'rd_logic' (10#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:19688]
-INFO: [Synth 8-638] synthesizing module 'wr_logic' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:16249]
+INFO: [Synth 8-256] done synthesizing module 'compare' (8#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:7562]
+INFO: [Synth 8-256] done synthesizing module 'rd_status_flags_as' (9#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:8547]
+INFO: [Synth 8-256] done synthesizing module 'rd_logic' (10#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:19688]
+INFO: [Synth 8-638] synthesizing module 'wr_logic' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:16249]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
 	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
@@ -938,7 +938,7 @@ INFO: [Synth 8-638] synthesizing module 'wr_logic' [c:/Users/Matt/Projects/mipsf
 	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 13 - type: integer 
 	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 12 - type: integer 
 	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'wr_bin_cntr' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:7761]
+INFO: [Synth 8-638] synthesizing module 'wr_bin_cntr' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:7761]
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_HAS_SRST bound to: 0 - type: integer 
 	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
@@ -947,16 +947,16 @@ INFO: [Synth 8-638] synthesizing module 'wr_bin_cntr' [c:/Users/Matt/Projects/mi
 	Parameter C_PNTR_WIDTH bound to: 4 - type: integer 
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_WR_RD_RATIO bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'wr_bin_cntr' (11#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:7761]
-INFO: [Synth 8-638] synthesizing module 'wr_status_flags_as' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:13534]
+INFO: [Synth 8-256] done synthesizing module 'wr_bin_cntr' (11#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:7761]
+INFO: [Synth 8-638] synthesizing module 'wr_status_flags_as' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:13534]
 	Parameter C_RD_PNTR_WIDTH bound to: 4 - type: integer 
 	Parameter C_WR_PNTR_WIDTH bound to: 4 - type: integer 
 	Parameter C_HAS_RST bound to: 1 - type: integer 
 	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
 	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'wr_status_flags_as' (12#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:13534]
-INFO: [Synth 8-256] done synthesizing module 'wr_logic' (13#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:16249]
-INFO: [Synth 8-638] synthesizing module 'output_blk' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:4436]
+INFO: [Synth 8-256] done synthesizing module 'wr_status_flags_as' (12#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:13534]
+INFO: [Synth 8-256] done synthesizing module 'wr_logic' (13#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:16249]
+INFO: [Synth 8-638] synthesizing module 'output_blk' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:4436]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_DATA_COUNT_WIDTH bound to: 4 - type: integer 
 	Parameter C_DIN_WIDTH bound to: 4 - type: integer 
@@ -982,14 +982,14 @@ INFO: [Synth 8-638] synthesizing module 'output_blk' [c:/Users/Matt/Projects/mip
 	Parameter C_USE_ECC bound to: 0 - type: integer 
 	Parameter C_FIFO_TYPE bound to: 0 - type: integer 
 	Parameter C_BYTE_STRB_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'output_blk' (14#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:4436]
-INFO: [Synth 8-256] done synthesizing module 'fifo_generator_ramfifo' (15#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:20583]
-INFO: [Synth 8-256] done synthesizing module 'fifo_generator_top' (16#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:32420]
-INFO: [Synth 8-256] done synthesizing module 'fifo_generator_v13_0_1_synth' (17#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:33659]
-INFO: [Synth 8-256] done synthesizing module 'fifo_generator_v13_0_1' (18#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0.vhd:676]
-INFO: [Synth 8-256] done synthesizing module 'cdc_fifo_gen' (19#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/synth/cdc_fifo_gen.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'output_blk' (14#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:4436]
+INFO: [Synth 8-256] done synthesizing module 'fifo_generator_ramfifo' (15#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:20583]
+INFO: [Synth 8-256] done synthesizing module 'fifo_generator_top' (16#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:32420]
+INFO: [Synth 8-256] done synthesizing module 'fifo_generator_v13_0_1_synth' (17#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd:33659]
+INFO: [Synth 8-256] done synthesizing module 'fifo_generator_v13_0_1' (18#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0.vhd:676]
+INFO: [Synth 8-256] done synthesizing module 'cdc_fifo_gen' (19#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/synth/cdc_fifo_gen.vhd:73]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 391.234 ; gain = 220.105
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 394.762 ; gain = 221.777
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -999,48 +999,48 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 391.234 ; gain = 220.105
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 394.762 ; gain = 221.777
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_ooc.xdc] for cell 'U0'
-Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen.xdc] for cell 'U0'
-Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/cdc_fifo_gen_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/cdc_fifo_gen_synth_1/dont_touch.xdc]
-Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc] for cell 'U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cdc_fifo_gen_propImpl.xdc].
+Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.runs/cdc_fifo_gen_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.runs/cdc_fifo_gen_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cdc_fifo_gen_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/cdc_fifo_gen_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 616.332 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.252 . Memory (MB): peak = 620.230 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1136,14 +1136,14 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 616.332 ; gain = 445.203
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Parallel Reinference  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 620.230 ; gain = 447.246
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1169,9 +1169,9 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 620.230 ; gain = 447.246
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1185,10 +1185,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:55 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:55 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1206,16 +1206,16 @@ WARNING: [Synth 8-3332] Sequential element (\inst_fifo_gen/reset_gen_ic.rstblk_c
 WARNING: [Synth 8-3332] Sequential element (\inst_fifo_gen/reset_gen_ic.rstblk_cc/ngwrdrst.grst.g7serrst.rd_rst_asreg_reg ) is unused and will be removed from module fifo_generator_v13_0_1.
 WARNING: [Synth 8-3332] Sequential element (\inst_fifo_gen/reset_gen_ic.rstblk_cc/ngwrdrst.grst.g7serrst.rd_rst_asreg_d2_reg ) is unused and will be removed from module fifo_generator_v13_0_1.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:55 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:55 . Memory (MB): peak = 620.230 ; gain = 447.246
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:55 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -1232,7 +1232,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1245,7 +1245,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1257,25 +1257,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1328,23 +1328,23 @@ Report Instance Areas:
 |20    |      \reset_gen_ic.rstblk_cc            |reset_blk_ramfifo                 |     8|
 +------+-----------------------------------------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 616.332 ; gain = 445.203
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 620.230 ; gain = 447.246
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 616.332 ; gain = 168.434
-Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 616.332 ; gain = 445.203
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:41 . Memory (MB): peak = 620.230 ; gain = 170.512
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:56 . Memory (MB): peak = 620.230 ; gain = 447.246
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_ooc.xdc] for cell 'U0'
-Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen.xdc] for cell 'U0'
-Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc] for cell 'U0'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc:53]
-get_clocks: Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1022.207 ; gain = 405.875
-Finished Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc] for cell 'U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc:53]
+get_clocks: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1025.668 ; gain = 405.438
+Finished Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc] for cell 'U0'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
@@ -1353,7 +1353,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 68 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:19 . Memory (MB): peak = 1022.207 ; gain = 799.406
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:01:10 . Memory (MB): peak = 1025.727 ; gain = 801.477
 INFO: [Coretcl 2-1174] Renamed 19 cell refs.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1022.207 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 25 19:48:12 2016...
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1025.727 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 1025.727 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 27 10:00:35 2016...

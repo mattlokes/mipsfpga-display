@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Wed Apr 27 09:56:14 2016
+# Process ID: 18400
+# Current directory: C:/Users/matt.lokes/Projects/mipsfpga-display/new
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8476 C:\Users\matt.lokes\Projects\mipsfpga-display\new\mipsfpga-display.xpr
+# Log file: C:/Users/matt.lokes/Projects/mipsfpga-display/new/vivado.log
+# Journal file: C:/Users/matt.lokes/Projects/mipsfpga-display/new\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.xpr
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run cdc_fifo_gen_synth_1
+reset_run pal_bram_mem_gen_synth_1
+reset_run fb_bram_mem_gen_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mipsfpga_display [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+set_property constrset package_constrs [get_runs synth_1]
+set_property constrset package_constrs [get_runs impl_1]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+set_property is_enabled true [get_files  C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/package_constrs/imports/new/timing.xdc]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+set_property is_enabled false [get_files  C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run impl_1
+set_property is_enabled true [get_files  C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/imports/sim/mf_disp_hw_axi_tb.v]
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+ipx::package_project -root_dir C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs -vendor imgtec.org -library user -taxonomy /UserIP
+set_property vendor justabitmatt.com [ipx::current_core]
+set_property display_name {MIPSfpga Display 1.0} [ipx::current_core]
+set_property description {AXI memory mapped framebuffer with VGA display controller.} [ipx::current_core]
+set_property supported_families {artix7 Beta} [ipx::current_core]
+ipx::add_user_parameter ASSOCIATED_BUSIF [ipx::current_core]
+set_property value_resolve_type user [ipx::get_user_parameters ASSOCIATED_BUSIF -of_objects [ipx::current_core]]
+ipgui::add_param -name {ASSOCIATED_BUSIF} -component [ipx::current_core]
+set_property display_name {Associated Busif} [ipgui::get_guiparamspec -name "ASSOCIATED_BUSIF" -component [ipx::current_core] ]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "ASSOCIATED_BUSIF" -component [ipx::current_core] ]
+set_property display_name {ASSOCIATED_BUSIF} [ipgui::get_guiparamspec -name "ASSOCIATED_BUSIF" -component [ipx::current_core] ]
+set_property tooltip {ASSOCIATED_BUSIF} [ipgui::get_guiparamspec -name "ASSOCIATED_BUSIF" -component [ipx::current_core] ]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "ASSOCIATED_BUSIF" -component [ipx::current_core] ]
+ipx::remove_user_parameter ASSOCIATED_BUSIF [ipx::current_core]
+ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces pix_clk -of_objects [ipx::current_core]]
+set_property value vga_red:vga_green:vga_blue [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces pix_clk -of_objects [ipx::current_core]]]
+set_property value {} [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces pix_clk -of_objects [ipx::current_core]]]
+set_property value Nul [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces pix_clk -of_objects [ipx::current_core]]]
+set_property value {} [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces pix_clk -of_objects [ipx::current_core]]]
+set_property library misc [ipx::current_core]
+set_property taxonomy /Embedded_Processing/AXI_Peripheral/High_Speed_Peripheral [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {C:\Users\matt.lokes\Projects\mipsfpga-display\new\mipsfpga-display.srcs\justabitmatt.com_misc_mipsfpga_display_1.0.zip} [ipx::current_core]

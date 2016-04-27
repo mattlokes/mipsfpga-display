@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc rfile:../../../mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc id:1 order:LATE scoped_inst:U0} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc rfile:../../../mipsfpga-display.srcs/sources_1/ip/cdc_fifo_gen/cdc_fifo_gen/cdc_fifo_gen_clocks.xdc id:1 order:LATE scoped_inst:U0} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_disable_timing -from CLK -to O [filter [all_fanout -from [get_ports wr_clk] -flat -endpoints_only -only_cells] {PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==LUTRAM}]
 set_property src_info {type:SCOPED_XDC file:1 line:61 export:INPUT save:INPUT read:READ} [current_design]

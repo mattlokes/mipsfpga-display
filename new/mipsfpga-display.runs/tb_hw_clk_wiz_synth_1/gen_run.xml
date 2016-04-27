@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="tb_hw_clk_wiz_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1461610078">
-  <File Type="RDS-DCP" Name="tb_hw_clk_wiz.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/tb_hw_clk_wiz_synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="tb_hw_clk_wiz_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="tb_hw_clk_wiz.dcp"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/tb_hw_clk_wiz_synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="tb_hw_clk_wiz_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="tb_hw_clk_wiz.tcl"/>
+  <File Type="RDS-UTIL-PB" Name="tb_hw_clk_wiz_utilization_synth.pb"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/tb_hw_clk_wiz_synth_1/tb_hw_clk_wiz_synth_1.psg"/>
+  <File Type="PA-TCL" Name="tb_hw_clk_wiz.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="tb_hw_clk_wiz_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="tb_hw_clk_wiz.vds"/>
   <File Type="RDS-UTIL" Name="tb_hw_clk_wiz_utilization_synth.rpt"/>
   <File Type="VDS-TIMINGSUMMARY" Name="tb_hw_clk_wiz_timing_summary_synth.rpt"/>
@@ -38,9 +38,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

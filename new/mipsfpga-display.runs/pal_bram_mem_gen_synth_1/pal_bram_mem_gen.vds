@@ -2,12 +2,12 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Mon Apr 25 19:47:09 2016
-# Process ID: 10908
-# Current directory: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/pal_bram_mem_gen_synth_1
+# Start of session at: Wed Apr 27 09:59:05 2016
+# Process ID: 18960
+# Current directory: C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.runs/pal_bram_mem_gen_synth_1
 # Command line: vivado.exe -log pal_bram_mem_gen.vds -mode batch -messageDb vivado.pb -notrace -source pal_bram_mem_gen.tcl
-# Log file: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/pal_bram_mem_gen_synth_1/pal_bram_mem_gen.vds
-# Journal file: C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/pal_bram_mem_gen_synth_1\vivado.jou
+# Log file: C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.runs/pal_bram_mem_gen_synth_1/pal_bram_mem_gen.vds
+# Journal file: C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.runs/pal_bram_mem_gen_synth_1\vivado.jou
 #-----------------------------------------------------------
 source pal_bram_mem_gen.tcl -notrace
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2015.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
@@ -15,19 +15,19 @@ WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:1.0 avai
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'pal_bram_mem_gen' generated file not found 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'pal_bram_mem_gen' generated file not found 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'pal_bram_mem_gen' generated file not found 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'pal_bram_mem_gen' generated file not found 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'pal_bram_mem_gen' generated file not found 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'pal_bram_mem_gen' generated file not found 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'pal_bram_mem_gen' generated file not found 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'pal_bram_mem_gen' generated file not found 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'pal_bram_mem_gen' generated file not found 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'pal_bram_mem_gen' generated file not found 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_sim_netlist.vhdl'. Please regenerate to continue.
 Command: synth_design -top pal_bram_mem_gen -part xc7a100tcsg324-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 301.770 ; gain = 130.438
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 304.152 ; gain = 131.980
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'pal_bram_mem_gen' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/synth/pal_bram_mem_gen.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'pal_bram_mem_gen' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/synth/pal_bram_mem_gen.vhd:73]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -101,8 +101,8 @@ INFO: [Synth 8-638] synthesizing module 'pal_bram_mem_gen' [c:/Users/Matt/Projec
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     3.10055 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_3_1' declared at 'c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3.vhd:133' bound to instance 'U0' of component 'blk_mem_gen_v8_3_1' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/synth/pal_bram_mem_gen.vhd:236]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_3_1' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3.vhd:277]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_3_1' declared at 'c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3.vhd:133' bound to instance 'U0' of component 'blk_mem_gen_v8_3_1' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/synth/pal_bram_mem_gen.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_3_1' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3.vhd:277]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -176,7 +176,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_3_1' [c:/Users/Matt/Proj
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     3.10055 mW - type: string 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_3_1_synth' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193780]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_3_1_synth' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193780]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -245,7 +245,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_3_1_synth' [c:/Users/Mat
 	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:192741]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:192741]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -316,22 +316,22 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [c:/Users/Matt/Project
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187182]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187182]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_MEM_TYPE bound to: 1 - type: integer 
 	Parameter C_HAS_RSTA bound to: 0 - type: integer 
@@ -368,13 +368,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [c:/Users/Matt/Pro
 	Parameter C_USE_ECC bound to: 0 - type: integer 
 	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
 	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_input_block' (1#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187182]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193270]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193274]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193278]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193282]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193296]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:184458]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_input_block' (1#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187182]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193270]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193274]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193278]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193282]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193296]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:184458]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
@@ -448,7 +448,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [c:/Users/Mat
 	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:182885]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:182885]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
@@ -506,7 +506,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [c:/Users/Matt/
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 8 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:6987]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:6987]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -563,7 +563,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper' [c:/Users/Mat
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 8 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 8 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:16048]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:16048]
 	Parameter DOA_REG bound to: 1 - type: integer 
 	Parameter DOB_REG bound to: 1 - type: integer 
 	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -663,13 +663,13 @@ INFO: [Synth 8-3919] null assignment ignored [c:/Users/Matt/Projects/mipsfpga-di
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 0 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 36 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB18E1' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:16091]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper' (2#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:6987]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (3#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:182885]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:185950]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:186103]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (4#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:184458]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187787]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB18E1' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:16091]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper' (2#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:6987]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (3#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:182885]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:185950]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:186103]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (4#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:184458]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187787]
 	Parameter C_MEM_TYPE bound to: 1 - type: integer 
 	Parameter C_WRITE_WIDTH_A bound to: 18 - type: integer 
 	Parameter C_READ_WIDTH_A bound to: 18 - type: integer 
@@ -680,13 +680,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [c:/Users/Matt/Pr
 	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
 	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
 	Parameter C_USE_ECC bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (5#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187787]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (6#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:192741]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_3_1_synth' (7#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193780]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_3_1' (8#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3.vhd:277]
-INFO: [Synth 8-256] done synthesizing module 'pal_bram_mem_gen' (9#1) [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/synth/pal_bram_mem_gen.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (5#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187787]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (6#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:192741]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_3_1_synth' (7#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193780]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_3_1' (8#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3.vhd:277]
+INFO: [Synth 8-256] done synthesizing module 'pal_bram_mem_gen' (9#1) [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/synth/pal_bram_mem_gen.vhd:73]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 471.035 ; gain = 299.703
+Finished RTL Elaboration : Time (s): cpu = 00:01:15 ; elapsed = 00:01:26 . Memory (MB): peak = 473.938 ; gain = 301.766
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -695,44 +695,44 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[35] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[34] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[33] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[32] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[31] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[26] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[25] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[24] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[23] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[17] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[16] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[15] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[14] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[13] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[8] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[7] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[6] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[5] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[35] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[34] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[33] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[32] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[31] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[26] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[25] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[24] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[23] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[17] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[16] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[15] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[14] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[13] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[8] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[7] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[6] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
-INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[5] to constant 0 [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[35] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[34] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[33] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[32] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[31] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[26] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[25] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[24] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[23] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[17] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[16] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[15] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[14] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[13] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[8] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[7] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[6] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINA[5] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[35] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[34] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[33] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[32] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[31] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[26] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[25] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[24] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[23] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[17] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[16] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[15] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[14] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[13] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[8] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[7] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[6] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
+INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[5] to constant 0 [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 471.035 ; gain = 299.703
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:15 ; elapsed = 00:01:26 . Memory (MB): peak = 473.938 ; gain = 301.766
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -741,35 +741,35 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_ooc.xdc] for cell 'U0'
-Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/pal_bram_mem_gen_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.runs/pal_bram_mem_gen_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.runs/pal_bram_mem_gen_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.runs/pal_bram_mem_gen_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 530.039 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 532.301 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:07 ; elapsed = 00:02:18 . Memory (MB): peak = 530.039 ; gain = 358.707
+Finished Constraint Validation : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 532.301 ; gain = 360.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:07 ; elapsed = 00:02:18 . Memory (MB): peak = 530.039 ; gain = 358.707
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 532.301 ; gain = 360.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:07 ; elapsed = 00:02:18 . Memory (MB): peak = 530.039 ; gain = 358.707
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:34 . Memory (MB): peak = 532.301 ; gain = 360.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:07 ; elapsed = 00:02:19 . Memory (MB): peak = 530.039 ; gain = 358.707
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 532.301 ; gain = 360.129
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -800,14 +800,14 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:02:08 ; elapsed = 00:02:19 . Memory (MB): peak = 530.039 ; gain = 358.707
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 532.301 ; gain = 360.129
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:19 . Memory (MB): peak = 530.039 ; gain = 358.707
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 532.301 ; gain = 360.129
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:02:08 ; elapsed = 00:02:19 . Memory (MB): peak = 530.039 ; gain = 358.707
+Finished Parallel Reinference  : Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 532.301 ; gain = 360.129
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -818,9 +818,9 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:19 . Memory (MB): peak = 530.039 ; gain = 358.707
+Finished Area Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 532.301 ; gain = 360.129
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:02:08 ; elapsed = 00:02:19 . Memory (MB): peak = 530.039 ; gain = 358.707
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 532.301 ; gain = 360.129
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -834,10 +834,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:21 ; elapsed = 00:02:32 . Memory (MB): peak = 567.637 ; gain = 396.305
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:32 ; elapsed = 00:01:44 . Memory (MB): peak = 569.496 ; gain = 397.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:21 ; elapsed = 00:02:32 . Memory (MB): peak = 567.637 ; gain = 396.305
+Finished Timing Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:44 . Memory (MB): peak = 569.496 ; gain = 397.324
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -849,16 +849,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:21 ; elapsed = 00:02:32 . Memory (MB): peak = 577.340 ; gain = 406.008
+Finished Technology Mapping : Time (s): cpu = 00:01:32 ; elapsed = 00:01:44 . Memory (MB): peak = 579.195 ; gain = 407.023
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:02:21 ; elapsed = 00:02:32 . Memory (MB): peak = 577.340 ; gain = 406.008
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:32 ; elapsed = 00:01:44 . Memory (MB): peak = 579.195 ; gain = 407.023
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:21 ; elapsed = 00:02:32 . Memory (MB): peak = 577.340 ; gain = 406.008
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:32 ; elapsed = 00:01:44 . Memory (MB): peak = 579.195 ; gain = 407.023
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -875,7 +875,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:22 ; elapsed = 00:02:33 . Memory (MB): peak = 577.340 ; gain = 406.008
+Finished IO Insertion : Time (s): cpu = 00:01:33 ; elapsed = 00:01:45 . Memory (MB): peak = 579.195 ; gain = 407.023
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -888,7 +888,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:22 ; elapsed = 00:02:33 . Memory (MB): peak = 577.340 ; gain = 406.008
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:33 ; elapsed = 00:01:45 . Memory (MB): peak = 579.195 ; gain = 407.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -900,25 +900,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:22 ; elapsed = 00:02:33 . Memory (MB): peak = 577.340 ; gain = 406.008
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:33 ; elapsed = 00:01:45 . Memory (MB): peak = 579.195 ; gain = 407.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:22 ; elapsed = 00:02:33 . Memory (MB): peak = 577.340 ; gain = 406.008
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:33 ; elapsed = 00:01:45 . Memory (MB): peak = 579.195 ; gain = 407.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:22 ; elapsed = 00:02:33 . Memory (MB): peak = 577.340 ; gain = 406.008
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:33 ; elapsed = 00:01:45 . Memory (MB): peak = 579.195 ; gain = 407.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:22 ; elapsed = 00:02:33 . Memory (MB): peak = 577.340 ; gain = 406.008
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:33 ; elapsed = 00:01:45 . Memory (MB): peak = 579.195 ; gain = 407.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -950,17 +950,17 @@ Report Instance Areas:
 |7     |            \prim_noinit.ram          |blk_mem_gen_prim_wrapper |     1|
 +------+--------------------------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:22 ; elapsed = 00:02:33 . Memory (MB): peak = 577.340 ; gain = 406.008
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:33 ; elapsed = 00:01:45 . Memory (MB): peak = 579.195 ; gain = 407.023
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:02:23 . Memory (MB): peak = 577.340 ; gain = 299.344
-Synthesis Optimization Complete : Time (s): cpu = 00:02:22 ; elapsed = 00:02:33 . Memory (MB): peak = 577.340 ; gain = 406.008
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:01:32 . Memory (MB): peak = 579.195 ; gain = 300.387
+Synthesis Optimization Complete : Time (s): cpu = 00:01:33 ; elapsed = 00:01:45 . Memory (MB): peak = 579.195 ; gain = 407.023
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/Matt/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/matt.lokes/Projects/mipsfpga-display/new/mipsfpga-display.srcs/sources_1/ip/pal_bram_mem_gen/pal_bram_mem_gen_ooc.xdc] for cell 'U0'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
@@ -968,7 +968,7 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 73 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:20 ; elapsed = 00:02:31 . Memory (MB): peak = 577.340 ; gain = 358.348
+synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:01:43 . Memory (MB): peak = 579.195 ; gain = 358.750
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 577.340 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 25 19:49:45 2016...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 579.195 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 27 10:00:52 2016...
