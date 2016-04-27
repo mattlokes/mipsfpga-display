@@ -1,0 +1,77 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Apr 27 17:19:26 2016
+| Host         : MattLokes running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file mipsfpga_display_control_sets_placed.rpt
+| Design       : mipsfpga_display
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    24 |
+| Minimum Number of register sites lost to control set restrictions |    96 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              21 |           11 |
+| No           | No                    | Yes                    |              68 |           26 |
+| No           | Yes                   | No                     |              15 |            7 |
+| Yes          | No                    | No                     |              12 |            4 |
+| Yes          | No                    | Yes                    |              68 |           21 |
+| Yes          | Yes                   | No                     |              32 |           12 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|       Clock Signal      |                                                                    Enable Signal                                                                    |                                                                Set/Reset Signal                                                               | Slice Load Count | Bel Load Count |
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  s00_axi_aclk_IBUF_BUFG |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_wr_reg2                                  |                1 |              1 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_d2                                       |                1 |              1 |
+|  pix_clk_IBUF_BUFG      |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_rd_reg2                                  |                1 |              1 |
+|  pix_clk_IBUF_BUFG      | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0]                   | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[0]                                         |                1 |              1 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg[1]_i_1_n_0 |                2 |              2 |
+|  pix_clk_IBUF_BUFG      |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[2]                                         |                1 |              2 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                                                                                     |                                                                                                                                               |                3 |              3 |
+|  pix_clk_IBUF_BUFG      |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1_n_0 |                1 |              3 |
+|  s00_axi_aclk_IBUF_BUFG | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0]                   |                                                                                                                                               |                1 |              8 |
+|  s00_axi_aclk_IBUF_BUFG | mf_disp_axi_top_inst/axi_awaddr1                                                                                                                    | mf_disp_axi_top_inst/axi_awlen_cntr[7]_i_1_n_0                                                                                                |                2 |              8 |
+|  s00_axi_aclk_IBUF_BUFG | mf_disp_axi_top_inst/axi_arlen_cntr01_out                                                                                                           | mf_disp_axi_top_inst/axi_arlen_cntr[7]_i_1_n_0                                                                                                |                3 |              8 |
+|  pix_clk_IBUF_BUFG      | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/gc0.count_d1_reg[3][0] | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[2]                                         |                2 |              8 |
+|  pix_clk_IBUF_BUFG      | mf_disp_axi_top_inst/disp/intf/v_count[9]_i_1_n_0                                                                                                   | mf_disp_axi_top_inst/disp/intf/frame_y_ptr_reg[0]_0                                                                                           |                4 |             10 |
+|  pix_clk_IBUF_BUFG      | mf_disp_axi_top_inst/disp/intf/frame_y_ptr[9]_i_1_n_0                                                                                               | mf_disp_axi_top_inst/disp/intf/frame_y_ptr_reg[0]_0                                                                                           |                2 |             10 |
+|  pix_clk_IBUF_BUFG      | mf_disp_axi_top_inst/disp/intf/frame_x_ptr[9]_i_1_n_0                                                                                               | mf_disp_axi_top_inst/disp/intf/frame_y_ptr_reg[0]_0                                                                                           |                5 |             10 |
+|  s00_axi_aclk_IBUF_BUFG | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0]                   | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gic0.gc0.count_reg[0][1]                     |                2 |             12 |
+|  pix_clk_IBUF_BUFG      | mf_disp_axi_top_inst/disp/fb/pix_rd_vld_dly                                                                                                         |                                                                                                                                               |                4 |             12 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gic0.gc0.count_reg[0][0]                     |                3 |             16 |
+|  s00_axi_aclk_IBUF_BUFG | mf_disp_axi_top_inst/axi_awaddr[15]_i_1_n_0                                                                                                         | mf_disp_axi_top_inst/disp/intf/frame_y_ptr_reg[0]_0                                                                                           |                7 |             16 |
+|  pix_clk_IBUF_BUFG      |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf_syncs/genblk1[0].sync/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/Q[1]                                         |                4 |             16 |
+|  pix_clk_IBUF_BUFG      | mf_disp_axi_top_inst/disp/intf/mapped_frame_ptr[16]_i_1_n_0                                                                                         | mf_disp_axi_top_inst/disp/intf/frame_y_ptr_reg[0]_0                                                                                           |                5 |             17 |
+|  pix_clk_IBUF_BUFG      |                                                                                                                                                     |                                                                                                                                               |                8 |             18 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf/frame_y_ptr_reg[0]_0                                                                                           |                9 |             20 |
+|  pix_clk_IBUF_BUFG      |                                                                                                                                                     | mf_disp_axi_top_inst/disp/intf/frame_y_ptr_reg[0]_0                                                                                           |               10 |             21 |
++-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

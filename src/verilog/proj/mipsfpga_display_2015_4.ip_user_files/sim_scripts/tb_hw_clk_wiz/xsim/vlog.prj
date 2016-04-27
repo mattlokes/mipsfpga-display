@@ -1,0 +1,6 @@
+verilog xil_defaultlib "../../../../ip/xil_2015_4/tb_hw_clk_wiz/tb_hw_clk_wiz_clk_wiz.v" 
+verilog xil_defaultlib "../../../../ip/xil_2015_4/tb_hw_clk_wiz/tb_hw_clk_wiz.v" 
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

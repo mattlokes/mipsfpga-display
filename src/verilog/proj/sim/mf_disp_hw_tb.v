@@ -97,16 +97,11 @@ assign sys_wr_data = send_cmd ? tb_cmds[tb_ptr][31:0]  : 32'h00000000;
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //Pixel Clock
-mf_disp_vga_clk vga_clk (
-   .resetn   ( resetn ),
-   
-   .CLK100MHZ( CLK100MHZ),
-   
-   .clock_pll_locked( ),
-   
-   .sys_clk  ( sys_clk ), //50Mhz Out
-   .vga_clk  ( pix_clk )  //VGA (25.175Mhz) Clk Out
-);
+tb_hw_clk_wiz vga_clk (
+   .clk_in1( CLK100MHZ ),//BOARD (100Mhz) CLK in
+   .clk_out1( pix_clk ), //VGA   (25.175Mhz) CLK out
+   .clk_out2( sys_clk )  //SYS   (50Mhz) CLK out
+ );
 
 mf_disp_top disp(
    .resetn      (resetn),

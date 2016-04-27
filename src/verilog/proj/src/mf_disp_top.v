@@ -51,9 +51,12 @@ module mf_disp_top(
    wire   cmd_intf_frame_restrt;
    wire   intf_frame_switch;
    wire   intf_frame_restrt;
-   wire   cmd_intf_enabled;
-   wire   cmd_intf_pix_dm;
-   wire   cmd_intf_tm;
+   wire   pix_cmd_intf_enabled;
+   wire   pix_cmd_intf_pix_dm;
+   wire   pix_cmd_intf_tm;
+   wire   sys_cmd_intf_enabled;
+   wire   sys_cmd_intf_pix_dm;
+   wire   sys_cmd_intf_tm;
    
    wire   intf_frame_sel;
    
@@ -86,9 +89,9 @@ mf_disp_cmd_reg_top cmd(
    .cmd_wr_addr  ( cmd_wr_addr[7:0] ),
    .cmd_wr_data  ( sys_wr_data[31:0]),
    
-   .cmd_intf_enabled ( cmd_intf_enabled ), //Interface Enabled
-   .cmd_intf_pix_dm  ( cmd_intf_pix_dm ),  //Interface Pixel Doubling Mode
-   .cmd_intf_tm      ( cmd_intf_tm ),      //Interface Test Pattern Mode
+   .cmd_intf_enabled ( sys_cmd_intf_enabled ), //Interface Enabled
+   .cmd_intf_pix_dm  ( sys_cmd_intf_pix_dm ),  //Interface Pixel Doubling Mode
+   .cmd_intf_tm      ( sys_cmd_intf_tm ),      //Interface Test Pattern Mode
    
    .cmd_intf_frame_switch (cmd_intf_frame_switch), //Interface Show Next Frame
    .cmd_intf_frame_restrt (cmd_intf_frame_restrt) //Interface Restart Frame
@@ -96,14 +99,14 @@ mf_disp_cmd_reg_top cmd(
 
 // Framebuffer and Palette Instance    
 mf_disp_fb_top fb (
-
+   .resetn       ( resetn ),
    .sys_clk      ( sys_clk ), //Clk in
    .pix_clk      ( pix_clk ), //Clk in
    
-   .fb_active_sel( intf_frame_sel ),
-   .fb_wr_vld    ( fb_wr_vld ),
-   .fb_wr_addr   ( fb_wr_addr[15:0] ),
-   .fb_wr_data   ( sys_wr_data[31:0] ),
+   .pix_fb_active_sel( intf_frame_sel ),
+   .fb_wr_vld        ( fb_wr_vld ),
+   .fb_wr_addr       ( fb_wr_addr[15:0] ),
+   .fb_wr_data       ( sys_wr_data[31:0] ),
        
    .pal_wr_vld   ( pal_wr_vld ),
    .pal_wr_addr  ( pal_wr_addr[9:0] ),
@@ -118,6 +121,7 @@ mf_disp_fb_top fb (
 );
 
 // Syncronisers for the system to interface clock domain
+//Data Crossing
 wire [1:0] tmp_o;
 mf_disp_syncs #(1) intf_syncs (
    .pulse_mode( 1'b1 ),
@@ -128,6 +132,30 @@ mf_disp_syncs #(1) intf_syncs (
    .out_b     ( {tmp_o,     intf_frame_restrt,     intf_frame_switch } )
 );
 
+//Control Crossing
+mf_disp_sync en_sync_sp (
+   .resetn    ( resetn ),
+   .clk_a     ( sys_clk ),
+   .clk_b     ( pix_clk ),
+   .in_a      ( sys_cmd_intf_enabled ),
+   .out_b     ( pix_cmd_intf_enabled )
+);
+
+mf_disp_sync tm_sync_sp (
+   .resetn    ( resetn ),
+   .clk_a     ( sys_clk ),
+   .clk_b     ( pix_clk ),
+   .in_a      ( sys_cmd_intf_tm ),
+   .out_b     ( pix_cmd_intf_tm )
+);
+
+mf_disp_sync dm_sync_sp (
+   .resetn    ( resetn ),
+   .clk_a     ( sys_clk ),
+   .clk_b     ( pix_clk ),
+   .in_a      ( sys_cmd_intf_pix_dm ),
+   .out_b     ( pix_cmd_intf_pix_dm )
+);
 
 //Phys Interface to the Frame Buffer
 mf_disp_intf_vga_top intf (
@@ -136,9 +164,9 @@ mf_disp_intf_vga_top intf (
    .resetn    ( resetn  ),
    
    //Do these constant pins need CDC handling?!
-   .intf_mode_enabled    ( cmd_intf_enabled ), //Interface Enabled
-   .intf_mode_pix_double ( cmd_intf_pix_dm ),  //Interface Pixel Doubling Mode
-   .intf_mode_test       ( cmd_intf_tm ),      //Interface Test Pattern Mode
+   .intf_mode_enabled    ( pix_cmd_intf_enabled ), //Interface Enabled
+   .intf_mode_pix_double ( pix_cmd_intf_pix_dm ),  //Interface Pixel Doubling Mode
+   .intf_mode_test       ( pix_cmd_intf_tm ),      //Interface Test Pattern Mode
    
    .intf_frame_sel       (intf_frame_sel),
    

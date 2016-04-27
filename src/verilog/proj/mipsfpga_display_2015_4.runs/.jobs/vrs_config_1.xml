@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="cdc_fifo_gen_synth_1" LaunchDir="C:/Users/matt.lokes/Projects/mipsfpga-display/src/verilog/proj/mipsfpga_display_2015_4.runs/cdc_fifo_gen_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="pal_bram_mem_gen_synth_1" LaunchDir="C:/Users/matt.lokes/Projects/mipsfpga-display/src/verilog/proj/mipsfpga_display_2015_4.runs/pal_bram_mem_gen_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fb_bram_mem_gen_synth_1" LaunchDir="C:/Users/matt.lokes/Projects/mipsfpga-display/src/verilog/proj/mipsfpga_display_2015_4.runs/fb_bram_mem_gen_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="tb_hw_clk_wiz_synth_1" LaunchDir="C:/Users/matt.lokes/Projects/mipsfpga-display/src/verilog/proj/mipsfpga_display_2015_4.runs/tb_hw_clk_wiz_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

@@ -56,7 +56,7 @@ endgenerate
 generate
    for ( g=0; g<NUM; g=g+1 ) begin
 
-      mf_disp_cdc_fifo sync(
+      cdc_fifo_gen sync(
                              .rst    (~resetn),
                              .empty  (cdc_empty[g]),
                              .full   (),
