@@ -72,12 +72,14 @@ module mf_disp_intf_vga_top(
  wire h_sync;
  wire h_back;
  wire h_end;
+ reg [5:1] h_sync_dly;
  
  wire v_data;
  wire v_front;
  wire v_sync;
  wire v_back;
  wire v_end;
+ reg [5:1] v_sync_dly;
  
 //------------------------------------------------------------------------
  // Generate VGA Sync, and internal control signals for 640x480
@@ -253,13 +255,26 @@ end
 assign intf_pix_rd_vld        = h_data & ~filler & ~test_mode;
 assign intf_pix_rd_addr[15:0] = mapped_frame_ptr[15:0];
 
+// Pixel Read Pipeline takes 5 cycles, Flop VS/HS to sync with pixel data return.
+always @(posedge vga_clk, negedge resetn) begin : flop_pix_rd_compensate
+    integer i;
+    if ( ~resetn ) begin
+       h_sync_dly[5:1] <= 5'b0;
+       v_sync_dly[5:1] <= 5'b0;
+    end
+    else begin
+       h_sync_dly[5:1] <= { h_sync_dly[4:1], h_sync} ; //Shift hs delay channel
+       v_sync_dly[5:1] <= { v_sync_dly[4:1], v_sync} ; //Shift vs delay channel
+    end
+end
+
 
 //------------------------------------------------------------------------
 // VGA Interface Pins
 //------------------------------------------------------------------------
 //Sync Timing Signals
-assign VGA_hsync = ~h_sync;
-assign VGA_vsync = ~v_sync; 
+assign VGA_hsync = ~h_sync_dly[5];
+assign VGA_vsync = ~v_sync_dly[5]; 
 
 //VGA Color Mux
 assign VGA_red  [3:0] = filler    ? 4'h0                   :  // In Filler Section Display Black
