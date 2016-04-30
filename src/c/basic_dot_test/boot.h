@@ -41,6 +41,24 @@ IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 OF SUCH DAMAGE.
 */
 
+#define LEAF(name)\
+    .##text;\
+    .##globl    name;\
+    .##ent  name;\
+name:
+
+#define END(name)\
+    .##size name,.-name;\
+    .##end  name
+
+//#define GCR_CONFIG_ADDR     0xbfbf8000  // KSEG0 address of the GCR registers
+//#define GIC_P_BASE_ADDR		0x1bdc0000  // physical address of the GIC
+//#define GIC_BASE_ADDR		0xbbdc0000  // KSEG0 address address of the GIC
+//#define CPC_P_BASE_ADDR 	0x1bde0001  // physical address of the CPC
+//#define CPC_BASE_ADDR		0xbbde0000  // KSEG0 address address of the CPC
+
+//#define DENALI_CTL_SECTION  0xbbc00000
+
 /**************************************************************************************
  Register use while executing in this file: ("GLOBAL" denotes a common value.)
 **************************************************************************************/

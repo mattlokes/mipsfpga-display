@@ -1,9 +1,9 @@
 /*
- * init_gpr.S
+ * init_tlb.S
  *
  *  Created on: Jan 12, 2011
- *      Author: MIPS TECHNOLOGIES, INC
- *  Start of boot code for 24K Family of Cores
+ *  Author: MIPS TECHNOLOGIES, INC
+ *  Common TLB initialization for MIPS cores
 */
 /*
 Copyright (c) 2014, Imagination Technologies LLC and Imagination Technologies
@@ -42,78 +42,45 @@ IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 OF SUCH DAMAGE.
 */
 
-#define _BOOTCODE 1
-
 #include "boot.h"
 #include <mips/regdef.h>
-#include <mips/asm.h>
 #include <mips/m32c0.h>
 
 	.set	noreorder           // Don't allow the assembler to reorder instructions.
 	.set	noat                // Don't allow the assembler to use r1(at) for synthetic instr.
 /**************************************************************************************
 **************************************************************************************/
-LEAF(init_gpr)
+LEAF(init_tlb)
 
-	// Initialize the general purpose registers and any shadow register sets.
-	// Although not necessary, register initialization may be useful during boot,
-    // debug, and simulation when certain ways of initializing registers may not work
-    // (xor rN, rN, rN for example.)
-
-	// Initialize register sets
-    li      $1, 0xdeadbeef      // (0xdeadbeef stands out, kseg2 mapped, odd.)
-
-	// Determine how many shadow sets are implemented (in addition to the base register set.)
-	// the first time thru the loop it will initialize using $1 set above.
-	// At the bottom og the loop, 1 is  subtract from $30
-	// and loop back to next_shadow_set to start the next loop and the next lowest set number.
-	mfc0	$29, C0_SRSCTL		// read C0_SRSCtl
-	ext	    $30, $29, 26, 4		// extract HSS
-
-next_shadow_set:
-	// set PSS to shadow set to be initialized
-	ins	$29, $30, 6, 4		// insert PSS
-	mtc0	$29, C0_SRSCTL		// write C0_SRSCtl
-
-	wrpgpr	$1, $1
-	wrpgpr	$2, $1
-	wrpgpr	$3, $1
-	wrpgpr	$4, $1
-	wrpgpr	$5, $1
-	wrpgpr	$6, $1
-	wrpgpr	$7, $1
-	wrpgpr	$8, $1
-	wrpgpr	$9, $1
-	wrpgpr	$10, $1
-	wrpgpr	$11, $1
-	wrpgpr	$12, $1
-	wrpgpr	$13, $1
-	wrpgpr	$14, $1
-	wrpgpr	$15, $1
-	wrpgpr	$16, $1
-	wrpgpr	$17, $1
-	wrpgpr	$18, $1
-	wrpgpr	$19, $1
-	wrpgpr	$20, $1
-	wrpgpr	$21, $1
-	wrpgpr	$22, $1
-	wrpgpr	$23, $1
-	wrpgpr	$24, $1
-	wrpgpr	$25, $1
-	wrpgpr	$26, $1
-	wrpgpr	$27, $1
-	wrpgpr	$28, $1
-	wrpgpr	$29, $1
-	beqz    $30, done_init_gpr // early exit when we get to set 0 so we don't clobber return in $31
+check_for_tlb:
+	// Determine if we have a TLB
+	mfc0    v1, C0_CONFIG			// read C0_Config
+	ext	    v1, v1, 7, 3			// extract MT field
+	li	    a3, 0x1					// load a 1 to check against
+	bne	    v1, a3, done_init_tlb
+	mfc0    v0, C0_CONFIG1			// C0_Config1
 	nop
-	wrpgpr	$30, $1
-	wrpgpr	$31, $1
-	b	next_shadow_set
-	add	$30, -1  // Since the code started with the highest set number this decrements to the next lower number
 
+start_init_tlb:
+	// Config1MMUSize == Number of TLB entries - 1
+	ext     v1, v0, CFG1_MMUSSHIFT, 6 // extract MMU Size
+	mtc0    zero, C0_ENTRYLO0		// write C0_EntryLo0
+	mtc0    zero, C0_ENTRYLO1		// write C0_EntryLo1
+	mtc0    zero, C0_PAGEMASK		// write C0_PageMask
+	mtc0    zero, C0_WIRED			// write C0_Wired
+	li	    a0, 0x80000000
 
-done_init_gpr:
+next_tlb_entry_pair:
+	mtc0    v1, C0_INDEX			// write C0_Index
+	mtc0	a0, C0_ENTRYHI			// write C0_EntryHi
+	ehb
+	tlbwi
+	add	    a0, (2<<13)				// Add 8K to the address to avoid TLB conflict with previous entry
+
+	bne		v1, zero, next_tlb_entry_pair
+	add	    v1, -1
+
+done_init_tlb:
     jr      ra
     nop
-END(init_gpr)
-
+END(init_tlb)

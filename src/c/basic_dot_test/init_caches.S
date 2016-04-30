@@ -42,11 +42,8 @@ IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 OF SUCH DAMAGE.
 */
 
-#define _BOOTCODE 1
-
 #include "boot.h"
 #include <mips/regdef.h>
-#include <mips/asm.h>
 #include <mips/m32c0.h>
 
 	.set	noreorder           // Don't allow the assembler to reorder instructions.

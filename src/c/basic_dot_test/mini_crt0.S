@@ -1,12 +1,10 @@
 /*
- * init_tlb.S
+ * mini_crt0.S
  *
- *  Created on: Jan 12, 2011
- *  Author: MIPS TECHNOLOGIES, INC
- *  Common TLB initialization for MIPS cores
+ * Set up a basic runtime environment
 */
 /*
-Copyright (c) 2014, Imagination Technologies LLC and Imagination Technologies
+Copyright (c) 2015, Imagination Technologies LLC and Imagination Technologies
 Limited.
 
 All rights reserved.
@@ -42,48 +40,59 @@ IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 OF SUCH DAMAGE.
 */
 
-#define _BOOTCODE 1
-
-#include "boot.h"
 #include <mips/regdef.h>
-#include <mips/asm.h>
-#include <mips/m32c0.h>
+#include "boot.h"
 
-	.set	noreorder           // Don't allow the assembler to reorder instructions.
-	.set	noat                // Don't allow the assembler to use r1(at) for synthetic instr.
+#define s1_all_ones     s1   /* at Will hold 0xffffffff to simplify bit insertion of 1's. */
+#define t1_temp_addr    t1   /* from address */
+#define t3_temp_mark    t3   /* ending address */
+
+
+	.set	noreorder           # Don't allow the assembler to reorder instructions.
+	.set	noat                # Don't allow the assembler to use r1(at) for synthetic instr.
+
 /**************************************************************************************
 **************************************************************************************/
-LEAF(init_tlb)
+LEAF(_start)
 
-check_for_tlb:
-	// Determine if we have a TLB
-	mfc0    v1, C0_CONFIG			// read C0_Config
-	ext	    v1, v1, 7, 3			// extract MT field
-	li	    a3, 0x1					// load a 1 to check against
-	bne	    v1, a3, done_init_tlb
-	mfc0    v0, C0_CONFIG1			// C0_Config1
-	nop
+    # Set the global pointer register address to _gp - value set in linker .ld file
+    la      gp, _gp             # All share globals.
 
-start_init_tlb:
-	// Config1MMUSize == Number of TLB entries - 1
-	ext     v1, v0, CFG1_MMUSSHIFT, 6 // extract MMU Size
-	mtc0    zero, C0_ENTRYLO0		// write C0_EntryLo0
-	mtc0    zero, C0_ENTRYLO1		// write C0_EntryLo1
-	mtc0    zero, C0_PAGEMASK		// write C0_PageMask
-	mtc0    zero, C0_WIRED			// write C0_Wired
-	li	    a0, 0x80000000
+    # Set up the stack pointer register to STACK_BASE_ADDR defined in boot.h
+    li      sp, STACK_BASE_ADDR # Set up stack base.
 
-next_tlb_entry_pair:
-	mtc0    v1, C0_INDEX			// write C0_Index
-	mtc0	a0, C0_ENTRYHI			// write C0_EntryHi
-	ehb
-	tlbwi
-	add	    a0, (2<<13)				// Add 8K to the address to avoid TLB conflict with previous entry
+    # Make a stack frame; must be a multiple of 8-bytes
+    addiu   sp, sp, -8
 
-	bne		v1, zero, next_tlb_entry_pair
-	add	    v1, -1
+    # Preserve return address over the call to main
+    sw      ra, 0(sp)
 
-done_init_tlb:
+    li      s1_all_ones, 0xffffffff
+
+zero_bss:
+    la      t1_temp_addr, _fbss
+    ins     t1_temp_addr, s1_all_ones, 29, 1
+    la      t3_temp_mark, _end
+    ins     t3_temp_mark, s1_all_ones, 29, 1
+    beq     t1_temp_addr, t3_temp_mark, invoke_main
+    nop
+next_bss_word:
+    sw      zero, 0(t1_temp_addr)
+    addiu   t1_temp_addr, 4
+    bne     t1_temp_addr, t3_temp_mark, next_bss_word
+    nop
+
+invoke_main:
+    la      t0, main
+    # Create space for the o32 argument stack
+    addiu   sp, sp, -16
+    # Call main
+    jalr    t0
+    nop
+
+    lw      ra, 0(sp)
+    addiu   sp, sp, 8
     jr      ra
     nop
-END(init_tlb)
+END(_start)
+

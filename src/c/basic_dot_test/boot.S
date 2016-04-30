@@ -1,5 +1,5 @@
 /*
- * boot.S for microAptiv_UP
+ * start.S for microAptiv_UP
  *
  *  Created on: April 12, 2014
  *  Author: MIPS TECHNOLOGIES, INC
@@ -42,10 +42,8 @@ IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 OF SUCH DAMAGE.
 */
 
-#define _RESETCODE 1
 
 #include <mips/regdef.h>
-#include <mips/asm.h>
 #include "boot.h"
 #include "fpga.h"
 #include <mips/m32c0.h>
@@ -90,30 +88,30 @@ init_resources:                 # initializes resources for "cpu".
 
     # Initialize the TLB
 
-    la      a2, init_tlb        # Generate unique EntryHi contents per entry pair.
-    jalr    a2
-    nop
+ #   la      a2, init_tlb        # Generate unique EntryHi contents per entry pair.
+ #   jalr    a2
+ #   nop
 
     #Initialize the Instruction cache
 
-    la      a2, init_icache     # Initialize the L1 instruction cache. (Executing using I$ on return.)
-    jalr    a2
-    nop
+  #  la      a2, init_icache     # Initialize the L1 instruction cache. (Executing using I$ on return.)
+  #  jalr    a2
+   # nop
 
     # The changing of Kernel mode cacheability must be done from KSEG1
     # Since the code is executing from KSEG0 It needs to do a jump to KSEG1 change K0 and jump back to KSEG0
 
-    la          a2, change_k0_cca
-    li          a1, 0xf
-    ins         a2, a1, 29, 1   # changed to KSEG1 address by setting bit 29
-    jalr        a2
-    nop
+  #  la          a2, change_k0_cca
+  #  li          a1, 0xf
+  #  ins         a2, a1, 29, 1   # changed to KSEG1 address by setting bit 29
+  #  jalr        a2
+  #  nop
 
     # Initialize the Data cache
 
-    la      a2, init_dcache     # Initialize the L1 data cache
-    jalr    a2
-    nop
+  #  la      a2, init_dcache     # Initialize the L1 data cache
+  #  jalr    a2
+  #  nop
 
     # Prepare for eret to main.
 
@@ -139,6 +137,7 @@ END(__cpu_init)
 # Inline the code: fill the rest of space between here and the next exception vector address.
 
 #include "init_caches.S"
+#include "mini_crt0.S"
 
 /**************************************************************************************
     B O O T   E X C E P T I O N   H A N D L E R S (CP0 Status[BEV] = 1)

@@ -1,9 +1,9 @@
 /*
- * initcp0.S
+ * init_gpr.S
  *
  *  Created on: Jan 12, 2011
- *  Author: MIPS TECHNOLOGIES, INC
- *  Common CP0 register initializations
+ *      Author: MIPS TECHNOLOGIES, INC
+ *  Start of boot code for 24K Family of Cores
 */
 /*
 Copyright (c) 2014, Imagination Technologies LLC and Imagination Technologies
@@ -42,62 +42,75 @@ IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 OF SUCH DAMAGE.
 */
 
-#define _BOOTCODE 1
-
 #include "boot.h"
 #include <mips/regdef.h>
-#include <mips/asm.h>
 #include <mips/m32c0.h>
 
 	.set	noreorder           // Don't allow the assembler to reorder instructions.
 	.set	noat                // Don't allow the assembler to use r1(at) for synthetic instr.
 /**************************************************************************************
 **************************************************************************************/
-LEAF(init_cp0)
+LEAF(init_gpr)
 
-    // Initialize Status
-	li	v1, 0x00400404		// (M_StatusERL | M_StatusIPL1 | M_StatusBEV)
-	mtc0	v1, C0_STATUS		// write C0_Status
+	// Initialize the general purpose registers and any shadow register sets.
+	// Although not necessary, register initialization may be useful during boot,
+    // debug, and simulation when certain ways of initializing registers may not work
+    // (xor rN, rN, rN for example.)
 
-	// Initialize Watch registers if implemented.
-	mfc0	v0, C0_CONFIG1		// read C0_Config1
-	ext	v1, v0, 3, 1		// extract bit 3 WR (Watch registers implemented)
-	beq 	v1, zero, done_wr
-	li    	v1, 0x7				// (M_WatchHiI | M_WatchHiR | M_WatchHiW)
+	// Initialize register sets
+    li      $1, 0xdeadbeef      // (0xdeadbeef stands out, kseg2 mapped, odd.)
 
-	// Clear all possible Watch Status bits and disable watch exceptions
-	mtc0	v1, C0_WATCHHI		// write C0_WatchHi0
-	mtc0	zero, C0_WATCHLO	// write C0_WatchLo0
+	// Determine how many shadow sets are implemented (in addition to the base register set.)
+	// the first time thru the loop it will initialize using $1 set above.
+	// At the bottom og the loop, 1 is  subtract from $30
+	// and loop back to next_shadow_set to start the next loop and the next lowest set number.
+	mfc0	$29, C0_SRSCTL		// read C0_SRSCtl
+	ext	    $30, $29, 26, 4		// extract HSS
 
-	mtc0	v1, C0_WATCHHI, 1	// write C0_WatchHi1
-	mtc0	zero, C0_WATCHLO, 1	// write C0_WatchLo1
+next_shadow_set:
+	// set PSS to shadow set to be initialized
+	ins	$29, $30, 6, 4		// insert PSS
+	mtc0	$29, C0_SRSCTL		// write C0_SRSCtl
 
-	mtc0	v1, C0_WATCHHI, 2	// write C0_WatchHi2
-	mtc0	zero, C0_WATCHLO, 2	// write C0_WatchLo2
-
-	mtc0	v1, C0_WATCHHI, 3	// write C0_WatchHi3
-	mtc0	zero, C0_WATCHLO, 3	// write C0_WatchLo3
-
-	mtc0	v1, C0_WATCHHI, 4	// write C0_WatchHi4
-	mtc0	zero, C0_WATCHLO, 4	// write C0_WatchLo4
-
-	mtc0	v1, C0_WATCHHI, 5	// write C0_WatchHi5
-	mtc0	zero, C0_WATCHLO, 5	// write C0_WatchLo5
-
-	mtc0	v1, C0_WATCHHI, 6	// write C0_WatchHi6
-	mtc0	zero, C0_WATCHLO, 6	// write C0_WatchLo6
-
-	mtc0	v1, C0_WATCHHI, 7	// write C0_WatchHi7
-	mtc0	zero, C0_WATCHLO, 7	// write C0_WatchLo7
-
-done_wr:
-
-	// Clear WP bit to avoid watch exception upon user code entry, IV, and software interrupts.
-	mtc0	zero, C0_CAUSE		// write C0_Cause: Init AFTER init of CP0 WatchHi/Lo registers.
-
-	// Clear timer interrupt. (Count was cleared at the reset vector to allow timing boot.)
-	mtc0	zero, C0_COMPARE	// write C0_Compare
-
-        jr      ra
+	wrpgpr	$1, $1
+	wrpgpr	$2, $1
+	wrpgpr	$3, $1
+	wrpgpr	$4, $1
+	wrpgpr	$5, $1
+	wrpgpr	$6, $1
+	wrpgpr	$7, $1
+	wrpgpr	$8, $1
+	wrpgpr	$9, $1
+	wrpgpr	$10, $1
+	wrpgpr	$11, $1
+	wrpgpr	$12, $1
+	wrpgpr	$13, $1
+	wrpgpr	$14, $1
+	wrpgpr	$15, $1
+	wrpgpr	$16, $1
+	wrpgpr	$17, $1
+	wrpgpr	$18, $1
+	wrpgpr	$19, $1
+	wrpgpr	$20, $1
+	wrpgpr	$21, $1
+	wrpgpr	$22, $1
+	wrpgpr	$23, $1
+	wrpgpr	$24, $1
+	wrpgpr	$25, $1
+	wrpgpr	$26, $1
+	wrpgpr	$27, $1
+	wrpgpr	$28, $1
+	wrpgpr	$29, $1
+	beqz    $30, done_init_gpr // early exit when we get to set 0 so we don't clobber return in $31
 	nop
-END(init_cp0)
+	wrpgpr	$30, $1
+	wrpgpr	$31, $1
+	b	next_shadow_set
+	add	$30, -1  // Since the code started with the highest set number this decrements to the next lower number
+
+
+done_init_gpr:
+    jr      ra
+    nop
+END(init_gpr)
+

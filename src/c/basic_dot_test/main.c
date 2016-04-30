@@ -38,22 +38,22 @@ int main() {
   pal_ptr += 1;
 
   //Alternating Red Dots
-  for( i=0; i<4; i=i+1) {
+  for( i=0; i<4000; i=i+1) {
      *frm_ptr = 0x01000100;
      frm_ptr += 1;
   }
   //Alternating Green Dots
-  for( i=0; i<4; i=i+1) {
+  for( i=0; i<4000; i=i+1) {
      *frm_ptr = 0x02000200;
      frm_ptr += 1;
   }
   //Alternating Blue Dots
-  for( i=0; i<4; i=i+1) {
+  for( i=0; i<4000; i=i+1) {
      *frm_ptr = 0x03000300;
      frm_ptr += 1;
   }
   //Alternating White Dots
-  for( i=0; i<4; i=i+1) {
+  for( i=0; i<4000; i=i+1) {
      *frm_ptr = 0x04000400;
      frm_ptr += 1;
   }
