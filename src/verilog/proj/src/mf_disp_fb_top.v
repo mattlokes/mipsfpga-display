@@ -42,12 +42,16 @@ module mf_disp_fb_top(
    
 );
 
- reg pix_rd_vld_dly;
- reg [15:0] pix_rd_addr_dly;
+ reg pix_rd_vld_dly1;
+ reg [15:0] pix_rd_addr_dly1;
+ reg [1:0]  pix_rd_addr_dly2;
+ reg [1:0]  pix_rd_addr_dly3;
+
  wire sys_fb_active_sel;
 
  wire [31:0] fb_rd_data;
  wire [17:0] pix_rd_data;
+ wire [7:0]  pal_rd_addr;
  
  wire [7:0]  pal_wr_addr_shft;
  wire [1:0]  tmp_pal_wr_addr_shft;
@@ -58,8 +62,10 @@ module mf_disp_fb_top(
     
  //Timing Flop
  always @(posedge pix_clk) begin
-    pix_rd_vld_dly    <= pix_rd_vld;
-    pix_rd_addr_dly   <= pix_rd_addr[15:0];
+    pix_rd_vld_dly1         <= pix_rd_vld;
+    pix_rd_addr_dly1[15:0]  <= pix_rd_addr[15:0];
+    pix_rd_addr_dly2[1:0]   <= pix_rd_addr_dly1[1:0];
+    pix_rd_addr_dly3[1:0]   <= pix_rd_addr_dly2[1:0];
  end   
  
  mf_disp_sync fs_sync_ps (
@@ -81,11 +87,20 @@ fb_bram_mem_gen fb_ram (
     .dina  ( fb_wr_data[31:0] ),
     //Frame Buffer Read Data
     .clkb  ( pix_clk ),
-    .enb   ( pix_rd_vld_dly ),
-    .addrb ( {pix_rd_addr_dly[15:2], ~pix_fb_active_sel } ),
+    .enb   ( pix_rd_vld_dly1 ),
+    .addrb ( {pix_rd_addr_dly1[15:2], ~pix_fb_active_sel } ),
     .doutb ( fb_rd_data[31:0] )
 );
- 
+
+
+//4 Pixels read at a cycle from frame buff, use pix_rd_addr_dly3[1:0] to index which
+// pixel to display.
+assign pal_rd_addr[7:0] = (pix_rd_addr_dly3[1:0] == 2'h3) ? fb_rd_data[31:24]: 
+                          (pix_rd_addr_dly3[1:0] == 2'h2) ? fb_rd_data[23:16]: 
+                          (pix_rd_addr_dly3[1:0] == 2'h1) ? fb_rd_data[15:8 ]: 
+                                                            fb_rd_data[ 7:0 ]; 
+
+
  //256x18bit Colour Palette
 pal_bram_mem_gen pal_ram(
     //Palette Data Write
@@ -97,7 +112,7 @@ pal_bram_mem_gen pal_ram(
     // Pixel Data out of Palette
     .clkb  ( pix_clk ),
     .enb   ( pix_rd_vld ),
-    .addrb ( fb_rd_data[7:0] ),
+    .addrb ( pal_rd_addr[7:0] ),
     .doutb ( pix_rd_data[17:0] )
 );
     
