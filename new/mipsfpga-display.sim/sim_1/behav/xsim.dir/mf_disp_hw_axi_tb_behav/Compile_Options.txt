@@ -1,1 +1,0 @@
--wto "7a9355bda57c44a29c235bbf0fb0a11a" --debug "typical" --relax --mt "2" -d "MF_DISP_SIMULATION=1" -L "fifo_generator_v13_0_1" -L "xil_defaultlib" -L "blk_mem_gen_v8_3_1" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "mf_disp_hw_axi_tb_behav" "xil_defaultlib.mf_disp_hw_axi_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
