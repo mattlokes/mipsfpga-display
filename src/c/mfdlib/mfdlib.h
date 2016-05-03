@@ -5,7 +5,7 @@
 //    Date   :  3/5/2016
 //    Author :  Matt Lokes (matt.lokes@imgtec.com)
 //
-//    Description :  MIPSfpga Display support libraryi Header
+//    Description :  MIPSfpga Display support library Header
 //
 //
 /////////////////////////////////////////////////
@@ -49,19 +49,21 @@
    #define MFD_POINT(x , y)  ( x + (y<<8) + (y<<6) )
 
    //Display Control and Initialisation Tasks
-   int mfd_display_enable ( void );
-   int mfd_display_disable ( void );
-   int mfd_display_testmode ( void );
+   //--------------------------------------------------------------------
+   inline int mfd_display_enable ( void );
+   inline int mfd_display_disable ( void );
+   inline int mfd_display_testmode ( void );
    
-   int mfd_display_set_palette ( unsigned char mapped_color, unsigned int raw_color );
+   inline int mfd_display_set_palette ( unsigned char mapped_color, unsigned int raw_color );
 
    int mfd_display_fill_frame( unsigned char mapped_color );
    int mfd_display_fill_palette ( unsigned int raw_color );
 
-   int mfd_display_switch_frame( void );
+   inline int mfd_display_switch_frame( void );
    int mfd_display_init ( void );
 
    //Drawing Functions
+   //--------------------------------------------------------------------
    void mfd_draw_point( unsigned short x, unsigned short y, unsigned char mapped_color);
    void mfd_draw_line( unsigned short x0, unsigned short y0, unsigned short x1, unsigned short y1, unsigned char mapped_color);
    void mfd_draw_box( unsigned short x0, unsigned short y0, unsigned short x1, unsigned short y1, unsigned char mapped_color);

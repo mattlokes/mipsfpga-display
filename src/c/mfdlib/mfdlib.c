@@ -14,48 +14,77 @@
 
 
    //Display Control and Initialisation Tasks
-   int mfd_display_enable ( void )
+   //--------------------------------------------------------------------
+   inline int mfd_display_enable ( void )
    {
-      return 0
+      *MFD_CTL0 = 0x00000001;
+      return 0;
    }
 
-   int mfd_display_disable ( void )
+   inline int mfd_display_disable ( void )
    {
-      return 0
+      *MFD_CTL0 = 0x00000000;
+      return 0;
    }
 
-   int mfd_display_testmode ( void )
+   inline int mfd_display_testmode ( void )
    {
-      return 0
+      *MFD_CTL0 = 0x00000005;
+      return 0;
    }
    
-   int mfd_display_set_palette ( unsigned char mapped_color,
-                                 unsigned int raw_color ) 
+   inline int mfd_display_set_palette ( unsigned char mapped_color,
+                                        unsigned int raw_color ) 
    {
-      return 0
+      unsigned int *pal_ptr = MFD_PAL_BASE + ((unsigned int)mapped_color);
+      *pal_ptr = raw_color;
+      return 0;
    }
 
    int mfd_display_fill_frame( unsigned char mapped_color ) 
    {
-      return 0
+      unsigned int i = 0;
+      unsigned int* frm_ptr = MFD_FRM_BASE;
+      for ( i=0; i<(MFD_FRM_SIZE/4); i++ )
+      {
+         *frm_ptr = mapped_color;
+	 *frm_ptr++;
+      }
+      return 0;
    }
    
    int mfd_display_fill_palette ( unsigned int raw_color )
    {
-      return 0
+      unsigned int i = 0;
+      unsigned int* pal_ptr = MFD_PAL_BASE;
+      for ( i=0; i<(MFD_PAL_SIZE/4); i++ )
+      {
+         *pal_ptr = raw_color;
+	 *pal_ptr++;
+      }
+      return 0;
    }
 
-   int mfd_display_switch_frame( void )
+   inline int mfd_display_switch_frame( void )
    {
-      return 0
+      *MFD_CTL1 = 0x00000001;
+      return 0;
    }
    
    int mfd_display_init ( void )
    {
-      return 0
+      unsigned int i = 0;
+      mfd_display_disable( void );             // Disable display.
+      mfd_display_fill_frame( 0x00000000 );    // Clear frame. 
+      mfd_display_switch_frame( void );        // Switch to other frame.
+      mfd_display_fill_palette( 0x00000000 );  // Clear palette.
+      mfd_display_fill_frame( 0x00000000 );    // Clear other frame.
+      mfd_display_enable ( void );
+      return 0;
    }
 
    //Drawing Functions
+   //--------------------------------------------------------------------
    void mfd_draw_point( unsigned short x, 
                         unsigned short y, 
 			unsigned char mapped_color )
