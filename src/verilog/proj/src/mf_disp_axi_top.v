@@ -182,6 +182,8 @@
 	reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
 	reg  	axi_awready;
 	reg  	axi_wready;
+	reg [2 : 0]     axi_awsize;
+	wire [3 : 0]     axi_wstrb;
 	reg [1 : 0] 	axi_bresp;
 	//reg [C_S_AXI_BUSER_WIDTH-1 : 0] 	axi_buser;
 	reg  	axi_bvalid;
@@ -297,6 +299,7 @@
 	    begin
 	      axi_awaddr <= 0;
 	      axi_awlen_cntr <= 0;
+	      axi_awsize <= 0;
 	    end 
 	  else
 	    begin    
@@ -306,11 +309,13 @@
 	          axi_awaddr <= S_AXI_AWADDR[C_S_AXI_ADDR_WIDTH - 1:0];  
 	          // start address of transfer
 	          axi_awlen_cntr <= 0;
+	          axi_awsize <= S_AXI_AWSIZE[2:0];
 	        end   
 	      else if((axi_awlen_cntr <= S_AXI_AWLEN) && axi_wready && S_AXI_WVALID)        
 	        begin
 
 	          axi_awlen_cntr <= axi_awlen_cntr + 1;
+	          axi_awsize <= S_AXI_AWSIZE[2:0];
 
 	          case (S_AXI_AWBURST)
 	            2'b00: // fixed burst
@@ -614,6 +619,10 @@
 	   axi_rdata = 32'hDEADBABE;
 	end    
 
+    //If AWSIZE = Bytes fake wstrb based on the address
+    assign axi_wstrb = (axi_awsize == 3'b000) ? (4'h1 << axi_awaddr[1:0]) : 
+                                                S_AXI_WSTRB[3:0];
+
 	// Add user logic here
 
  mf_disp_top disp(
@@ -624,6 +633,7 @@
 
    .sys_wr_vld  ( axi_wready && S_AXI_WVALID ), //IN
    .sys_wr_addr ( axi_awaddr ), //IN 15:0
+   .sys_wr_strb ( axi_wstrb ),
    .sys_wr_data ( S_AXI_WDATA[(C_S_AXI_DATA_WIDTH-1) : 0] ), //IN 31:0
    
    /******* VGA Signals *******************/

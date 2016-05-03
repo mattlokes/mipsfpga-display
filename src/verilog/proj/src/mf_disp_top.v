@@ -28,6 +28,7 @@ module mf_disp_top(
 
    input  wire         sys_wr_vld,
    input  wire [15:0]  sys_wr_addr,
+   input  wire [3:0]   sys_wr_strb,
    input  wire [31:0]  sys_wr_data,
    
    /******* VGA Signals *******************/
@@ -106,6 +107,7 @@ mf_disp_fb_top fb (
    .pix_fb_active_sel( intf_frame_sel ),
    .fb_wr_vld        ( fb_wr_vld ),
    .fb_wr_addr       ( fb_wr_addr[15:0] ),
+   .fb_wr_strb       ( sys_wr_strb[3:0] ),
    .fb_wr_data       ( sys_wr_data[31:0] ),
        
    .pal_wr_vld   ( pal_wr_vld ),

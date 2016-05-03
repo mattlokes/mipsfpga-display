@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="10" Path="C:/Users/matt.lokes/Projects/mipsfpga-display/src/verilog/proj/mipsfpga_display_2015_4.xpr">
+<Project Version="7" Minor="10" Path="C:/Users/Matt/Projects/mipsfpga-display/src/verilog/proj/mipsfpga_display_2015_4.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="4334575a7a824e28a7293e6c68476ca3"/>

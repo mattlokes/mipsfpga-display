@@ -28,6 +28,7 @@ module mf_disp_fb_top(
    
    input   wire           fb_wr_vld,
    input   wire [15:0]    fb_wr_addr,
+   input   wire [3:0]     fb_wr_strb,
    input   wire [31:0]    fb_wr_data,
    
    input   wire           pal_wr_vld,
@@ -82,7 +83,7 @@ fb_bram_mem_gen fb_ram (
     //Frame Buffer Write Data
     .clka  ( sys_clk ),
     .ena   ( fb_wr_vld ),
-    .wea   ( {4{fb_wr_vld}} ),
+    .wea   ( fb_wr_strb ),
     .addra ( {fb_wr_addr[15:2], sys_fb_active_sel} ),
     .dina  ( fb_wr_data[31:0] ),
     //Frame Buffer Read Data
