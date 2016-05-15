@@ -74,12 +74,12 @@
    int mfd_display_init ( void )
    {
       unsigned int i = 0;
-      mfd_display_disable( void );             // Disable display.
+      mfd_display_disable();             // Disable display.
       mfd_display_fill_frame( 0x00000000 );    // Clear frame. 
-      mfd_display_switch_frame( void );        // Switch to other frame.
+      mfd_display_switch_frame();        // Switch to other frame.
       mfd_display_fill_palette( 0x00000000 );  // Clear palette.
       mfd_display_fill_frame( 0x00000000 );    // Clear other frame.
-      mfd_display_enable ( void );
+      mfd_display_enable ();
       return 0;
    }
 
@@ -89,6 +89,16 @@
                         unsigned short y, 
 			unsigned char mapped_color )
    {
+      //X + 320*Y + MFD_FRM_BASE = pnt_addr
+      unsigned int    offset     = 0;
+      volatile unsigned char * point_addr = 0;
+
+      offset = (unsigned int)x;
+      offset += ((unsigned int)y<<8); // Y*256
+      offset += ((unsigned int)y<<6); // Y*64
+
+      point_addr = (volatile unsigned char *)MFD_FRM_BASE + offset;
+      *point_addr = mapped_color;
 
    }
    

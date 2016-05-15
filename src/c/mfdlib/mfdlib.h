@@ -10,6 +10,9 @@
 //
 /////////////////////////////////////////////////
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 #ifndef MFDLIB_H_
 #define MFDLIB_H_
@@ -71,4 +74,4 @@
    void mfd_draw_font( unsigned short x, unsigned short y, char* str, unsigned char mapped_color);
 
 
-#endif /*MFDLIB_H_ 
+#endif /*MFDLIB_H_*/ 
