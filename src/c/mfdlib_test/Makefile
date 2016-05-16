@@ -10,15 +10,15 @@ OD=mips-mti-elf-objdump
 OC=mips-mti-elf-objcopy
 SZ=mips-mti-elf-size
 
-CFLAGS= -I mfdlib/ -O2 -g -EL -c -lc -msoft-float -march=m14kec -msoft-float -mno-dsp -mno-dspr2 -mno-dspr3
-LDFLAGS_FPGA_RAM=-I mfdlib/ -T FPGA_Ram.ld -EL -lc -march=m14kec -mno-mips16 -mno-micromips -mno-dsp -mno-dspr2 -mno-dspr3 -msoft-float -Wl,-Map=FPGA_Ram_map.txt
+CFLAGS= -I ../mfdlib/ -O2 -g -EL -c -lc -msoft-float -march=m14kec -msoft-float -mno-dsp -mno-dspr2 -mno-dspr3
+LDFLAGS_FPGA_RAM=-I ../mfdlib/ -T FPGA_Ram.ld -EL -lc -march=m14kec -mno-mips16 -mno-micromips -mno-dsp -mno-dspr2 -mno-dspr3 -msoft-float -Wl,-Map=FPGA_Ram_map.txt
 
 ASOURCES= \
 boot.S
 
 CSOURCES= \
 main.c \
-mfdlib/mfdlib.c
+../mfdlib/mfdlib.c
 
 all: FPGA_RAM
 
@@ -45,7 +45,7 @@ clean:
 	rm -f FPGA_Ram.rec
 	rm -f FPGA_Ram.elf
 	rm -f *.o
-	rm -f */*.o
+	rm -f ../mfdlib/*.o
 	rm -rf MemoryFiles
 
 	

@@ -37,13 +37,13 @@
    //   -------------------------
 
 
-   #define MFD_CTL0     (volatile unsigned int *)( MFD_BASE_VA + 0xFE00 )
-   #define MFD_CTL1     (volatile unsigned int *)( MFD_BASE_VA + 0xFE04 )
+   #define MFD_CTL0     (unsigned int*)( MFD_BASE_VA + 0xFE00 )
+   #define MFD_CTL1     (unsigned int*)( MFD_BASE_VA + 0xFE04 )
   
-   #define MFD_PAL_BASE (volatile unsigned int *)( MFD_BASE_VA + 0xFA00 )
+   #define MFD_PAL_BASE (unsigned int*)( MFD_BASE_VA + 0xFA00 )
    #define MFD_PAL_SIZE 1024
    
-   #define MFD_FRM_BASE (volatile unsigned int *)( MFD_BASE_VA + 0x0000 )
+   #define MFD_FRM_BASE (unsigned int*)( MFD_BASE_VA + 0x0000 )
    #define MFD_FRM_SIZE 64000
 
    #define MFD_FRM_X 320

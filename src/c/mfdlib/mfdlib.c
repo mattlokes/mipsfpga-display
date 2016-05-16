@@ -17,19 +17,19 @@
    //--------------------------------------------------------------------
    inline int mfd_display_enable ( void )
    {
-      *MFD_CTL0 = 0x00000001;
+      *((volatile unsigned int*)MFD_CTL0) = 0x00000001;
       return 0;
    }
 
    inline int mfd_display_disable ( void )
    {
-      *MFD_CTL0 = 0x00000000;
+      *((volatile unsigned int*)MFD_CTL0) = 0x00000000;
       return 0;
    }
 
    inline int mfd_display_testmode ( void )
    {
-      *MFD_CTL0 = 0x00000005;
+      *((volatile unsigned int*)MFD_CTL0) = 0x00000005;
       return 0;
    }
    
@@ -67,7 +67,7 @@
 
    inline int mfd_display_switch_frame( void )
    {
-      *MFD_CTL1 = 0x00000001;
+      *((volatile unsigned int*)MFD_CTL1) = 0x00000001;
       return 0;
    }
    
