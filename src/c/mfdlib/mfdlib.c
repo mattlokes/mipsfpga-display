@@ -45,9 +45,13 @@
    {
       unsigned int i = 0;
       unsigned int* frm_ptr = MFD_FRM_BASE;
+      unsigned int col = ((unsigned int)mapped_color) |
+                         ((unsigned int)mapped_color)<<8 |
+                         ((unsigned int)mapped_color)<<16 |
+                         ((unsigned int)mapped_color)<<24 ;
       for ( i=0; i<(MFD_FRM_SIZE/4); i++ )
       {
-         *frm_ptr = mapped_color;
+         *frm_ptr = col;
 	 *frm_ptr++;
       }
       return 0;
