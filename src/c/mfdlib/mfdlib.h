@@ -67,11 +67,11 @@
 
    //Drawing Functions
    //--------------------------------------------------------------------
-   void mfd_draw_point( unsigned short x, unsigned short y, unsigned char mapped_color);
-   void mfd_draw_line( unsigned short x0, unsigned short y0, unsigned short x1, unsigned short y1, unsigned char mapped_color);
-   void mfd_draw_box( unsigned short x0, unsigned short y0, unsigned short x1, unsigned short y1, unsigned char mapped_color);
-   void mfd_draw_circ( unsigned short x, unsigned short y, unsigned short r, unsigned char mapped_color);
-   void mfd_draw_font( unsigned short x, unsigned short y, char* str, unsigned char mapped_color);
+   void mfd_draw_point( unsigned int x, unsigned int y, unsigned char mapped_color);
+   void mfd_draw_line( unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned char mapped_color);
+   void mfd_draw_box( unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned char mapped_color);
+   void mfd_draw_circ( unsigned int x, unsigned int y, unsigned int r, unsigned char mapped_color);
+   void mfd_draw_font( unsigned int x, unsigned int y, char* str, unsigned char mapped_color);
 
 
 #endif /*MFDLIB_H_*/ 

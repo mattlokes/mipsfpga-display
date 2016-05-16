@@ -10,9 +10,8 @@ OD=mips-mti-elf-objdump
 OC=mips-mti-elf-objcopy
 SZ=mips-mti-elf-size
 
-CFLAGS= -I ../mfdlib/ -O2 -g -EL -c -lc -msoft-float -march=m14kec -msoft-float -mno-dsp -mno-dspr2 -mno-dspr3
+CFLAGS= -I ../mfdlib/ -O2 -g -EL -lc -c -msoft-float -march=m14kec -msoft-float -mno-dsp -mno-dspr2 -mno-dspr3
 LDFLAGS_FPGA_RAM=-I ../mfdlib/ -T FPGA_Ram.ld -EL -lc -march=m14kec -mno-mips16 -mno-micromips -mno-dsp -mno-dspr2 -mno-dspr3 -msoft-float -Wl,-Map=FPGA_Ram_map.txt
-
 ASOURCES= \
 boot.S
 
@@ -26,7 +25,7 @@ COBJECTS=$(CSOURCES:.c=.o)
 AOBJECTS=$(ASOURCES:.S=.o)
 
 FPGA_RAM : $(AOBJECTS) $(COBJECTS) 
-	$(CC)  $(LDFLAGS_FPGA_RAM) $(COBJECTS) -o FPGA_Ram.elf
+	$(CC)  $(LDFLAGS_FPGA_RAM) $(COBJECTS) -o FPGA_Ram.elf -lc
 	$(SZ) FPGA_Ram.elf
 	$(OD) -d -S -l FPGA_Ram.elf > FPGA_Ram_dasm.txt
 	$(OD) -d FPGA_Ram.elf > FPGA_Ram_modelsim.txt

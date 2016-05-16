@@ -85,51 +85,65 @@
 
    //Drawing Functions
    //--------------------------------------------------------------------
-   void mfd_draw_point( unsigned short x, 
-                        unsigned short y, 
+   void mfd_draw_point( unsigned int x, 
+                        unsigned int y, 
 			unsigned char mapped_color )
    {
       //X + 320*Y + MFD_FRM_BASE = pnt_addr
       unsigned int    offset     = 0;
       volatile unsigned char * point_addr = 0;
 
-      offset = (unsigned int)x;
-      offset += ((unsigned int)y<<8); // Y*256
-      offset += ((unsigned int)y<<6); // Y*64
+      offset  = x;
+      offset += y<<8; // Y*256
+      offset += y<<6; // Y*64
 
       point_addr = (volatile unsigned char *)MFD_FRM_BASE + offset;
       *point_addr = mapped_color;
 
    }
    
-   void mfd_draw_line( unsigned short x0,
-                       unsigned short y0, 
-		       unsigned short x1, 
-		       unsigned short y1,
+   void mfd_draw_line( unsigned int x0,
+                       unsigned int y0, 
+		       unsigned int x1, 
+		       unsigned int y1,
 		       unsigned char mapped_color )
    {
-
+      //Bresenham's Line Drawining Algorthm
+      int            dx  = (int)abs(x1-x0); 
+      int            dy  = (int)abs(y1-y0); 
+      unsigned int sx  = x0<x1 ? 1 : -1;
+      unsigned int sy  = y0<y1 ? 1 : -1; 
+      int            err = (int)((dx>dy ? dx : -dy)>>1); 
+      int            e2;
+        
+      for(;;){
+         mfd_draw_point( x0, y0, mapped_color);
+         if (x0==x1 && y0==y1) break;
+         e2 = err;
+         if (e2 >-dx) { err -= dy; x0 += sx; }
+	 if (e2 < dy) { err += dx; y0 += sy; }
+      }
    }
 
-   void mfd_draw_box( unsigned short x0,
-                      unsigned short y0, 
-		      unsigned short x1, 
-		      unsigned short y1,
+   void mfd_draw_box( unsigned int x0,
+                      unsigned int y0, 
+		      unsigned int x1, 
+		      unsigned int y1,
 		      unsigned char mapped_color )
    {
 
    }
 
-   void mfd_draw_circ( unsigned short x,
-                       unsigned short y,
-		       unsigned short r,
+   void mfd_draw_circ( unsigned int x,
+                       unsigned int y,
+		       unsigned int r,
 		       unsigned char mapped_color)
    {
 
    }
 
-   void mfd_draw_font( unsigned short x,
-                       unsigned short y,
+   void mfd_draw_font( unsigned int x,
+                       unsigned int y,
 		       char* str,
 		       unsigned char mapped_color)
    {
