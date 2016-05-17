@@ -7,9 +7,10 @@
  *   (3) writes pixel data
  *   (4) enable buffer
  */
-
+#include <stdint.h>
 #include "mfdlib.h"
 
+void delay( uint32_t cnt);
 //------------------
 // main()
 //------------------
@@ -35,8 +36,8 @@ int main() {
   return 0;
 }
 
-void delay( unsigned int cnt) {
-  volatile unsigned int j;
+void delay( uint32_t cnt) {
+  volatile uint32_t j;
 
   for (j = 0; j<cnt; j++) ;	// delay 
 }
