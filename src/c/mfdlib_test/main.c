@@ -15,16 +15,17 @@ void delay( uint32_t cnt);
 // main()
 //------------------
 int main() {
-
   mfd_display_init();
   //mfd_display_testmode();
   mfd_display_set_palette( 0x01, 0x0003FFFF);
   mfd_display_set_palette( 0x02, 0x0000003F);
+  mfd_display_set_palette( 0x03, 0x0003F000);
   mfd_display_fill_frame( 0x02 );
   mfd_draw_line( 0,0,319,199,0x01);
   mfd_draw_line( 0,199,319,0,0x01);
   mfd_draw_line( 159,0,159,199,0x01);
   mfd_draw_line( 0,99,319,99,0x01);
+  mfd_draw_str( 20,50,"abcdef",0x00);
   mfd_display_switch_frame();
   //mfd_display_fill_frame( 0x01 );
   //mfd_display_switch_frame();

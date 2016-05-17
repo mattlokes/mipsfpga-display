@@ -11,7 +11,7 @@
 /////////////////////////////////////////////////
 
    #include "mfdlib.h"
-
+   #include "mfdlib_font.h"
 
    //Display Control and Initialisation Tasks
    //--------------------------------------------------------------------
@@ -142,12 +142,39 @@
 
    }
 
-   void mfd_draw_font( uint32_t x,
+   void mfd_draw_char( uint32_t x,
                        uint32_t y,
-		       char* str,
+		       char c,
 		       uint8_t mapped_color)
    {
+      uint32_t i,j;
 
+      // Convert the character to an index
+      c = c & 0x7F;
+      c = (c < ' ') ? 0 : (c - ' ');
+
+      // 'font' is a multidimensional array of [96][char_width]
+      // which is really just a 1D array of size 96*char_width.
+      //const uint8_t* chr = mfd_font[c*MFD_FONT_W];
+      const uint8_t* chr = mfd_font[c];
+
+      // Draw pixels
+      for (j=0; j<MFD_FONT_W; j++) {
+         for (i=0; i<MFD_FONT_H; i++) {
+            if (chr[j] & (1<<i)) {
+                mfd_draw_point( x+j, y+i, mapped_color);
+            }
+         }
+      }
    }
 
-
+   void mfd_draw_str( uint32_t x,
+                      uint32_t y,
+		      const char* str,
+		      uint8_t mapped_color)
+   {
+      while (*str) {
+         mfd_draw_char( x, y, *str++, mapped_color);
+         x += MFD_FONT_W;
+      }
+   }

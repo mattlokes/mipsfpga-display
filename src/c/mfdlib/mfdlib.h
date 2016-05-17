@@ -18,6 +18,7 @@
 #ifndef MFDLIB_H_
 #define MFDLIB_H_
 
+
    //<USER DEFINEABLE> [Ensure bit 16bits = 0x0000]
    #define MFD_BASE_PA 0x10D00000
    #define MFD_BASE_VA 0xB0D00000
@@ -52,6 +53,8 @@
 
    #define MFD_POINT(x , y)  ( x + (y<<8) + (y<<6) )
 
+   extern const unsigned char mfd_font[96][5];
+
    //Display Control and Initialisation Tasks
    //--------------------------------------------------------------------
    inline int32_t mfd_display_enable ( void );
@@ -72,7 +75,8 @@
           void mfd_draw_line ( uint32_t x0, uint32_t y0, uint32_t x1, uint32_t y1, uint8_t mapped_color);
           void mfd_draw_box  ( uint32_t x0, uint32_t y0, uint32_t x1, uint32_t y1, uint8_t mapped_color);
           void mfd_draw_circ ( uint32_t x, uint32_t y, uint32_t r, uint8_t mapped_color);
-          void mfd_draw_font ( uint32_t x, uint32_t y, char* str, uint8_t mapped_color);
+          void mfd_draw_char ( uint32_t x, uint32_t y, char c, uint8_t mapped_color);
+          void mfd_draw_str  ( uint32_t x, uint32_t y, const char* str, uint8_t mapped_color);
 
 
 #endif /*MFDLIB_H_*/ 
