@@ -57,26 +57,26 @@
 
    //Display Control and Initialisation Tasks
    //--------------------------------------------------------------------
-   inline int32_t mfd_display_enable ( void );
-   inline int32_t mfd_display_disable ( void );
-   inline int32_t mfd_display_testmode ( void );
+   extern inline int32_t mfd_display_enable ( void );
+   extern inline int32_t mfd_display_disable ( void );
+   extern inline int32_t mfd_display_testmode ( void );
    
-   inline int32_t mfd_display_set_palette ( uint8_t mapped_color, uint32_t raw_color );
+   extern inline int32_t mfd_display_set_palette ( uint8_t mapped_color, uint32_t raw_color );
 
-   int32_t mfd_display_fill_frame( uint8_t mapped_color );
-   int32_t mfd_display_fill_palette ( uint32_t raw_color );
+   extern int32_t mfd_display_fill_frame( uint8_t mapped_color );
+   extern int32_t mfd_display_fill_palette ( uint32_t raw_color );
 
-   inline int32_t mfd_display_switch_frame( void );
-   int32_t mfd_display_init ( void );
+   extern inline int32_t mfd_display_switch_frame( void );
+   extern int32_t mfd_display_init ( void );
 
    //Drawing Functions
    //--------------------------------------------------------------------
-   inline void mfd_draw_point( uint32_t x, uint32_t y, uint8_t mapped_color);
-          void mfd_draw_line ( uint32_t x0, uint32_t y0, uint32_t x1, uint32_t y1, uint8_t mapped_color);
-          void mfd_draw_box  ( uint32_t x0, uint32_t y0, uint32_t x1, uint32_t y1, uint8_t mapped_color);
-          void mfd_draw_circ ( uint32_t x, uint32_t y, uint32_t r, uint8_t mapped_color);
-          void mfd_draw_char ( uint32_t x, uint32_t y, char c, uint8_t mapped_color);
-          void mfd_draw_str  ( uint32_t x, uint32_t y, const char* str, uint8_t mapped_color);
+   extern inline void mfd_draw_point( uint32_t x, uint32_t y, uint8_t mapped_color);
+   extern void mfd_draw_line ( uint32_t x0, uint32_t y0, uint32_t x1, uint32_t y1, uint8_t mapped_color);
+   extern void mfd_draw_box  ( uint32_t x0, uint32_t y0, uint32_t x1, uint32_t y1, uint8_t mapped_color);
+   extern void mfd_draw_circ ( uint32_t x, uint32_t y, uint32_t r, uint8_t mapped_color);
+   extern void mfd_draw_char ( uint32_t x, uint32_t y, char c, uint8_t mapped_color);
+   extern void mfd_draw_str  ( uint32_t x, uint32_t y, const char* str, uint8_t mapped_color);
 
 
 #endif /*MFDLIB_H_*/ 
