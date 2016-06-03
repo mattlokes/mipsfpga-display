@@ -25,4 +25,8 @@ clean:
 	rm -f *.o
 	rm -f test
 
+run:
+	./test
+
+go: clean all run
 	

@@ -26,21 +26,21 @@
    //--------------------------------------------------------------------
    inline int32_t mfd_display_enable ( void )
    {
-      printf("MFDLIB_PC: mfd_display_enable\n");
+      //printf("MFDLIB_PC: mfd_display_enable\n");
       //*((volatile uint32_t*)MFD_CTL0) = 0x00000001;
       return 0;
    }
 
    inline int32_t mfd_display_disable ( void )
    {
-      printf("MFDLIB_PC: mfd_display_disable\n");
+      //printf("MFDLIB_PC: mfd_display_disable\n");
       //*((volatile uint32_t*)MFD_CTL0) = 0x00000000;
       return 0;
    }
 
    inline int32_t mfd_display_testmode ( void )
    {
-      printf("MFDLIB_PC: mfd_display_testmode\n");
+      //printf("MFDLIB_PC: mfd_display_testmode\n");
       //*((volatile uint32_t*)MFD_CTL0) = 0x00000005;
       return 0;
    }
@@ -48,7 +48,7 @@
    inline int32_t mfd_display_set_palette ( uint8_t  mapped_color,
                                             uint32_t raw_color ) 
    {
-     printf("MFDLIB_PC: mfd_display_palette\n");
+     //printf("MFDLIB_PC: mfd_display_palette\n");
      // uint32_t *pal_ptr = MFD_PAL_BASE + ((uint32_t)mapped_color);
      // *pal_ptr = raw_color;
      frame_pal[(3*mapped_color) + 0] = (png_byte)((raw_color & 0x0000003F)<<2); //R
@@ -59,7 +59,7 @@
 
    int32_t mfd_display_fill_frame( uint8_t mapped_color ) 
    {
-      printf("MFDLIB_PC: mfd_display_fill_frame\n");
+      //printf("MFDLIB_PC: mfd_display_fill_frame\n");
       uint32_t  i = 0;
       //uint32_t* frm_ptr = MFD_FRM_BASE;
       //uint32_t  col = ((uint32_t)mapped_color)<<24 | ((uint32_t)mapped_color)<<16 |
@@ -76,11 +76,11 @@
    
    int32_t mfd_display_fill_palette ( uint32_t raw_color )
    {
-      printf("MFDLIB_PC: mfd_display_fill_palette\n");
+      //printf("MFDLIB_PC: mfd_display_fill_palette\n");
       uint32_t i = 0;
       //uint32_t* pal_ptr = MFD_PAL_BASE;
       //for ( i=0; i<(MFD_PAL_SIZE/4); i++ )
-      for ( i=0; i<3*256; i++ )
+      for ( i=0; i<256; i++ )
       {
          frame_pal[(3*i) + 0] = (png_byte)((raw_color & 0x0000003F)<<2); //R
          frame_pal[(3*i) + 1] = (png_byte)((raw_color & 0x00000FC0)>>4); //R
@@ -123,7 +123,7 @@
                                uint32_t y, 
 		               uint8_t mapped_color )
    {
-      printf("MFDLIB_PC: mfd_draw_point\n");
+      //printf("MFDLIB_PC: mfd_draw_point\n");
       //X + 320*Y + MFD_FRM_BASE = pnt_addr
       //volatile uint8_t* point_addr = (volatile uint8_t*)MFD_FRM_BASE;
       //uint32_t          offset     = x;
@@ -133,7 +133,7 @@
       //point_addr += offset;
 
       //*point_addr = mapped_color;
-      frame_buf[((320*y)+x) + frame_off];
+      frame_buf[((320*y)+x) + frame_off] = mapped_color;
    }
    
    void mfd_draw_line( uint32_t x0,
@@ -142,7 +142,7 @@
 		       uint32_t y1,
 		       uint8_t mapped_color )
    {
-      printf("MFDLIB_PC: mfd_draw_line\n");
+      //printf("MFDLIB_PC: mfd_draw_line\n");
       //Bresenham's Line Drawining Algorthm
       int32_t   dx  = (int32_t)abs(x1-x0); 
       int32_t   dy  = (int32_t)abs(y1-y0); 
@@ -184,7 +184,7 @@
 		       char c,
 		       uint8_t mapped_color)
    {
-      printf("MFDLIB_PC: mfd_draw_char\n");
+      //printf("MFDLIB_PC: mfd_draw_char\n");
       uint32_t i,j;
 
       // Convert the character to an index
@@ -211,16 +211,16 @@
 		      const char* str,
 		      uint8_t mapped_color)
    {
-      printf("MFDLIB_PC: mfd_draw_str\n");
+      //printf("MFDLIB_PC: mfd_draw_str\n");
       while (*str) {
          mfd_draw_char( x, y, *str++, mapped_color);
-         x += MFD_FONT_W;
+         x += MFD_FONT_W+1;
       }
    }
 
 int png_write_screen(char* filename, int width, int height, char* buffer, char* title)
 {
-        printf("MFDLIB_PC: png_write_screen\n");
+        //printf("MFDLIB_PC: png_write_screen\n");
 	int code = 0;
 	FILE *fp = NULL;
 	png_structp png_ptr = NULL;
@@ -284,9 +284,9 @@ int png_write_screen(char* filename, int width, int height, char* buffer, char* 
 	int x, y;
 	for (y=0 ; y<height ; y++) {
 		for (x=0 ; x<width ; x++) {
-                        row[(x*3) + 0] = frame_pal[3*frame_buf[y*width + x] + 0];
-                        row[(x*3) + 1] = frame_pal[3*frame_buf[y*width + x] + 1];
-                        row[(x*3) + 2] = frame_pal[3*frame_buf[y*width + x] + 2];
+                        row[(x*3) + 2] = frame_pal[3*frame_buf[(y*width + x)+frame_off] + 0];
+                        row[(x*3) + 1] = frame_pal[3*frame_buf[(y*width + x)+frame_off] + 1];
+                        row[(x*3) + 0] = frame_pal[3*frame_buf[(y*width + x)+frame_off] + 2];
 		}
 		png_write_row(png_ptr, row);
 	}
