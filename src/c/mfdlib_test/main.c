@@ -27,22 +27,24 @@ int main() {
      mfd_display_set_palette( 0x03, 0x0003F000);
      mfd_display_set_palette( 0x04, 0x00000FC0);
   
-     delay(200000000);
+     delay(200000);
      for (i=1; i<5; i=i+1) {
         mfd_display_switch_frame();
-        mfd_draw_str( i*20,i*20,"MIPSfpga", (uint8_t)i);
+        mfd_draw_str( i*20,i*20,"MIPSFPGA!!", (uint8_t)i);
         mfd_display_switch_frame();
-        delay(200000000);
+        delay(200000);
      }
      //Flash Text
      for(i=0; i<10; i=i+1) {
-        delay(200000000);
+        delay(200000);
         mfd_display_switch_frame();
      }
      //Clear Screen
      mfd_display_fill_frame( 0x00 );
      mfd_display_switch_frame();
      mfd_display_fill_frame( 0x00 );
+     
+     delay(200000);
      
      // Do Gradient Fill left to Right (R,G,B,W)
      //---------------------------------------------------  
@@ -60,16 +62,17 @@ int main() {
         mfd_display_switch_frame();
         mfd_draw_line( i,0,i,199, (uint8_t)i);
         mfd_display_switch_frame();
-        delay(10000000);
      }
      //Pause to view
      for(i=0; i<10; i=i+1) {
-        delay(200000000);
+        delay(200000);
      }
      //Clear Screen
      mfd_display_fill_frame( 0x00 );
      mfd_display_switch_frame();
      mfd_display_fill_frame( 0x00 );
+     
+     delay(200000);
      
      // Do Gradient Fill right to left (W,M,Y,C)
      //---------------------------------------------------  
@@ -87,16 +90,17 @@ int main() {
         mfd_display_switch_frame();
         mfd_draw_line( 319-i,0,319-i,199, (uint8_t)i);
         mfd_display_switch_frame();
-        delay(10000000);
      }
      //Pause to view
      for(i=0; i<10; i=i+1) {
-        delay(200000000);
+        delay(200000);
      }
      //Clear Screen
      mfd_display_fill_frame( 0x00 );
      mfd_display_switch_frame();
      mfd_display_fill_frame( 0x00 );
+     
+     delay(200000);
  
   }
   return 0;

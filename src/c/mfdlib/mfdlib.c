@@ -70,6 +70,8 @@
    inline int32_t mfd_display_switch_frame( void )
    {
       *((volatile uint32_t*)MFD_CTL1) = 0x00000001;
+      //!!HACK!! Hardware Work Around to delay function return to let switch take effect 
+      volatile uint32_t h; for (h = 0; h<7000; h++) ;
       return 0;
    }
    
