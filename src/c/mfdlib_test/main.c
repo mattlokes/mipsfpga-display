@@ -101,6 +101,29 @@ int main() {
      mfd_display_fill_frame( 0x00 );
      
      delay(200000);
+     
+     // Do Frame Fill Test
+     //---------------------------------------------------  
+     mfd_display_fill_frame( 0xFF );
+     mfd_display_switch_frame(); //W
+     delay(200000);
+     mfd_display_switch_frame(); //B
+     delay(200000);
+     mfd_display_switch_frame(); //W
+     delay(200000);
+     mfd_display_switch_frame(); //B
+     delay(200000);
+     mfd_display_switch_frame(); //W
+     for(i=0; i<256; i=i+1) {
+        mfd_display_fill_frame( (uint8_t)i );
+        mfd_display_switch_frame();
+     }
+     //Clear Screen
+     mfd_display_fill_frame( 0x00 );
+     mfd_display_switch_frame();
+     mfd_display_fill_frame( 0x00 );
+     
+     delay(200000);
  
   }
   return 0;
